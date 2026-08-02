@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Libre+Franklin:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        body {
+            background-color: #1B4D3E; /* Brand Anchor Override */
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(27, 77, 62, 0.8) 0%, rgba(13, 38, 31, 1) 100%),
+                url("https://www.transparenttextures.com/patterns/dark-matter.png");
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .parchment-card {
+            background: #F5E6C8;
+            position: relative;
+            box-shadow: inset 0 0 40px rgba(62, 39, 35, 0.05), 0 10px 20px rgba(0,0,0,0.3);
+            border: 1px solid rgba(62, 39, 35, 0.15);
+        }
+
+        .parchment-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .timeline-path {
+            stroke: #D4AF37;
+            stroke-width: 3;
+            fill: none;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: drawPath 2s ease-out forwards;
+            filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
+        }
+
+        @keyframes drawPath {
+            to { stroke-dashoffset: 0; }
+        }
+
+        .node-glow {
+            filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.4));
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(27, 77, 62, 0.5);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 4px;
+        }
+
+        .branch-label {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-primary-fixed": "#241a00",
+                "error": "#ba1a1a",
+                "on-secondary": "#ffffff",
+                "primary-fixed": "#ffe088",
+                "on-tertiary-fixed-variant": "#2d486d",
+                "primary-fixed-dim": "#e9c349",
+                "surface-container": "#fcecce",
+                "surface-container-low": "#fff2db",
+                "surface-bright": "#fff8f1",
+                "tertiary-container": "#9ab4e0",
+                "tertiary-fixed": "#d5e3ff",
+                "surface": "#fff8f1",
+                "on-primary": "#ffffff",
+                "surface-container-lowest": "#ffffff",
+                "on-primary-fixed-variant": "#574500",
+                "secondary-fixed": "#baeed9",
+                "secondary-fixed-dim": "#9ed1bd",
+                "inverse-surface": "#38301b",
+                "tertiary-fixed-dim": "#adc8f5",
+                "tertiary": "#455f87",
+                "on-tertiary-fixed": "#001c3b",
+                "primary-container": "#d4af37",
+                "surface-variant": "#f0e1c3",
+                "on-tertiary": "#ffffff",
+                "on-secondary-fixed": "#002117",
+                "on-surface": "#221b08",
+                "surface-container-highest": "#f0e1c3",
+                "on-secondary-fixed-variant": "#1d4f40",
+                "on-surface-variant": "#4d4635",
+                "error-container": "#ffdad6",
+                "primary": "#735c00",
+                "on-error": "#ffffff",
+                "background": "#fff8f1",
+                "surface-tint": "#735c00",
+                "on-secondary-container": "#3d6d5d",
+                "secondary-container": "#baeed9",
+                "on-tertiary-container": "#2b466b",
+                "secondary": "#376757",
+                "inverse-on-surface": "#feefd1",
+                "surface-container-high": "#f6e7c9",
+                "inverse-primary": "#e9c349",
+                "on-background": "#221b08",
+                "surface-dim": "#e7d9bb",
+                "on-primary-container": "#554300",
+                "on-error-container": "#93000a",
+                "outline-variant": "#d0c5af",
+                "outline": "#7f7663"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "margin-desktop": "32px",
+                "xs": "4px",
+                "unit": "4px",
+                "margin-mobile": "16px",
+                "md": "16px",
+                "xl": "40px",
+                "sm": "8px",
+                "lg": "24px",
+                "gutter": "16px"
+            },
+            "fontFamily": {
+                "headline-md": ["EB Garamond"],
+                "headline-sm": ["EB Garamond"],
+                "display-lg": ["EB Garamond"],
+                "display-lg-mobile": ["EB Garamond"],
+                "label-md": ["Libre Franklin"],
+                "body-md": ["Libre Franklin"],
+                "body-lg": ["Libre Franklin"]
+            },
+            "fontSize": {
+                "headline-md": ["28px", {"lineHeight": "34px", "fontWeight": "600"}],
+                "headline-sm": ["22px", {"lineHeight": "28px", "fontWeight": "600"}],
+                "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "display-lg-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="text-on-surface font-body-md select-none">
+<!-- Top Navigation Bar -->
+<header class="bg-on-secondary-container/90 backdrop-blur-md fixed top-0 w-full z-50 border-b border-primary/20 shadow-sm flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4">
+<div class="flex items-center gap-md">
+<button class="transition-all duration-300 active:scale-95 text-primary-fixed p-2 hover:bg-primary/10 rounded-full">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary-fixed tracking-widest">Hyrule Codex</h1>
+</div>
+<div class="flex items-center gap-lg">
+<nav class="hidden md:flex gap-lg">
+<a class="text-primary-fixed-dim border-b-2 border-primary-fixed-dim font-label-md text-label-md transition-all" href="#">Archives</a>
+<a class="text-on-secondary/80 hover:text-primary-fixed font-label-md text-label-md transition-all" href="#">Atlas</a>
+<a class="text-on-secondary/80 hover:text-primary-fixed font-label-md text-label-md transition-all" href="#">Bestiary</a>
+</nav>
+<button class="transition-all duration-300 active:scale-95 text-primary-fixed p-2 hover:bg-primary/10 rounded-full">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-12 overflow-x-auto custom-scrollbar min-h-screen">
+<div class="max-w-[2000px] mx-auto px-margin-desktop relative">
+<!-- Page Header -->
+<div class="text-center mb-xl">
+<h2 class="font-display-lg text-display-lg text-primary-fixed-dim mb-xs">Chronicles of the Ages</h2>
+<p class="font-body-lg text-body-lg text-primary-fixed/70 max-w-2xl mx-auto">Trace the shattered history of Hyrule through the legendary Hero's journey across disparate realities.</p>
+<div class="flex justify-center mt-sm">
+<div class="w-16 h-px bg-primary-fixed/30"></div>
+<div class="mx-4 text-primary-fixed">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">change_history</span>
+</div>
+<div class="w-16 h-px bg-primary-fixed/30"></div>
+</div>
+</div>
+<!-- Interactive Timeline Visualization -->
+<div class="relative h-[800px] w-full min-w-[1400px]">
+<!-- SVG Connections Background -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" viewbox="0 0 1400 800">
+<!-- Central Path -->
+<path class="timeline-path" d="M 50 400 L 250 400"></path>
+<!-- Branching Points from Ocarina -->
+<!-- Decline Branch (Top) -->
+<path class="timeline-path" d="M 400 400 C 450 400, 500 200, 550 200 L 1300 200"></path>
+<!-- Child Hero Branch (Middle) -->
+<path class="timeline-path" d="M 400 400 L 1300 400"></path>
+<!-- Adult Hero Branch (Bottom) -->
+<path class="timeline-path" d="M 400 400 C 450 400, 500 600, 550 600 L 1300 600"></path>
+</svg>
+<!-- Start Node: Skyward Sword & Era of Prosperity -->
+<div class="absolute left-0 top-[340px] flex items-center gap-4">
+<div class="parchment-card w-48 p-3 rounded-lg border-2 border-primary-container node-glow hover:scale-105 transition-transform cursor-pointer">
+<div class="w-full h-24 bg-surface-dim rounded mb-2 overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="A highly detailed cinematic illustration of a legendary floating island above a sea of clouds, featuring an ancient goddess statue and a majestic bird in flight. The art style is high-fantasy watercolor, using a warm palette of golds and sky blues to evoke a feeling of ancient legend and divine origin in the Hyrule Codex style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAr2npzS8P8JxH7eVL76FSeTXrybQZjYPZvaKuUqJpqzRhkGISmE4g-3wJ90AGtCRexV519taYpnZbe_J8heZxY_58teA0iy_twNrSZxBuaQSg4jkzzKBLjBYkMpCVFgL8rk5ua_McsvaWImEanLAt1llaJLE15ViSKwRCEP39MSrHuHQdn2fX4tb4REQbmEUerb7NdqzuCTvQFx6_fCJg3mUOQVJx5qQSo2rsBFECejlunr_pHfAsPYA"/>
+</div>
+<span class="font-label-md text-label-md text-primary font-bold">SKYWARD SWORD</span>
+<div class="h-0.5 w-full bg-primary-container/30 my-1"></div>
+<p class="text-[10px] text-on-surface-variant leading-tight">The Creation and the Era of Hylia.</p>
+</div>
+<span class="material-symbols-outlined text-primary-fixed animate-pulse">arrow_forward</span>
+</div>
+<!-- Anchor Node: Ocarina of Time -->
+<div class="absolute left-[260px] top-[300px]">
+<div class="parchment-card w-64 p-4 rounded-xl border-4 border-primary node-glow hover:scale-110 transition-transform z-10 cursor-pointer relative">
+<div class="absolute -top-4 -right-4 bg-primary text-on-primary rounded-full p-2 shadow-lg">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="w-full h-32 bg-surface-dim rounded mb-3 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="An epic panoramic view of a vast green hyrulean field with a towering castle in the distance under a sunset sky. A young hero in green stands in the foreground holding an ancient blue ocarina. The aesthetic is mystical and nostalgic, featuring deep forest greens and glowing golden sunlight, mimicking an old hand-painted scroll." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp8DF6UzrcwLpGQcdcInvMq5P0nlK_QxALJH26dvpN4AYU_oCLIPsn-cI7Ag_On-4XpYTOXo76ULLJC-H9Dhb8hYRlbVQ7Pq-g8J5Wl8ScD_SCceCTZF16pmz6eyvhFOIukYmPcOsGwc2pQx3DFuVC1jwS6ld3YQNbxNcAXbVbS32aRSYLmeEUBep7S3OYIcDrSqdC2O2TcrE0kl2JDis8bDiaEx5jq_8g3r2T73u-qvz-NKiqcCjkgg"/>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary">Ocarina of Time</span>
+<div class="h-1 w-24 bg-primary-container mt-1 mb-2"></div>
+<p class="text-xs text-on-surface-variant italic">The era that fractured time itself.</p>
+</div>
+</div>
+<!-- DECLINE BRANCH -->
+<div class="absolute top-[80px] left-[450px]">
+<div class="flex items-center gap-4 mb-4">
+<span class="branch-label font-label-md text-label-md text-error bg-error-container/20 px-1 py-4 rounded border border-error/30 uppercase tracking-widest">Fallen Hero</span>
+<div class="flex gap-12">
+<!-- Node: A Link to the Past -->
+<div class="parchment-card w-44 p-3 rounded-lg border-2 border-primary-container/40 hover:border-primary-container transition-all cursor-pointer">
+<div class="w-full h-20 bg-surface-dim rounded mb-2 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A dark and moody illustration of a parallel misty world with purple skies and a twisted, shadowy castle. A lone hero in green is surrounded by glowing pink magical artifacts. The art style is dense and detailed like a medieval manuscript, using deep teals and rich magentas to signify the dark world era." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLH_rPMODKJZKNLEju0HqeRNyWVf3dUY2n5JLckkw6tDSoPUI_fCIIChZVN9bTBrWEk7yTeJI4M71fm7hUoKmzOeYqSPAGEQphwad2dRFTujxL-bNLCETK8EB6etQs6Rk69W_Pb_VcSBFb9wvxd7h9OD2aErr1c4NZNs93xdXXEmd02vPkV8wYIJOEijwjCzZQA8sJY-fM7j0WZgpaKuen1SrH94Yt8IZy2SWlD-YTaEG04XYmg8YLBQ"/>
+</div>
+<span class="font-label-md text-label-md text-primary">A LINK TO THE PAST</span>
+</div>
+<!-- Node: Link's Awakening -->
+<div class="parchment-card w-44 p-3 rounded-lg border-2 border-primary-container/40 hover:border-primary-container transition-all cursor-pointer">
+<div class="w-full h-20 bg-surface-dim rounded mb-2 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A whimsical yet melancholy painting of a tropical island with a giant colorful egg atop a mountain. The lighting is soft and dreamlike, with vibrant saturated colors like a memory fading away. The style captures the feeling of a tactile toy-like dioramas mixed with ancient sea charts and maritime legends." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6LTHNuYw-PPy3V9kxHuZ3dMVx0jIldZ1sbR8thsrbtt5SU_8Qwkp-4XDuckwGsOFVq9HkaAAEMSb1oY5pE3eHCOPylNjsEfROIXYjNuEqyo_cPVcLS2eUnbF7-EJFCkhIyf1R0uT_90vEuNC7sXUIG9tvol1psO_DDim7momZXr1tSXqDQAdOoNy_QQvfIr8P-Ksvgn347bTPL0LFSo0pnfokzhlvRI1zSRWJj85j2J-7CNHciPLK6w"/>
+</div>
+<span class="font-label-md text-label-md text-primary">LINK'S AWAKENING</span>
+</div>
+<!-- Node: Original Zelda -->
+<div class="parchment-card w-44 p-3 rounded-lg border-2 border-primary-container/40 hover:border-primary-container transition-all cursor-pointer">
+<div class="w-full h-20 bg-surface-dim rounded mb-2 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A rugged landscape of brown mountains and simple caves, featuring a shield and a burning torch. The style is minimalist and iconic, resembling the original 8-bit aesthetic but reimagined as an ancient weathered stone tablet carving with gold leaf accents in the cracks." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVrXWvbxXpqC-_RS9tpDjQD3dc-oYqi5YhVUfZ6v67vHOKdIp9wFGafizd40qLepKUf7f-2azu2L9ccSudPWQd7kNtoqAmW1UtjtHNwqW7gJcLg3o1R7ZlgJ_3IXSbVYnS1uafJPwUL5j1Qd2YaenLT4CIshx4V4ERfJwjKpj3KzFPT2UcsEz3ukzflVoxdisOeW16d5Kbcgp7x7-R7rbG4ZRnfi5jjeGf3UUJ8_k5rO_k-GqKEkHjaQ"/>
+</div>
+<span class="font-label-md text-label-md text-primary">THE HYRULE FANTASY</span>
+</div>
+</div>
+</div>
+</div>
+<!-- CHILD HERO BRANCH -->
+<div class="absolute top-[340px] left-[550px]">
+<div class="flex items-center gap-4">
+<span class="branch-label font-label-md text-label-md text-secondary bg-secondary-container/20 px-1 py-4 rounded border border-secondary/30 uppercase tracking-widest">Child Era</span>
+<div class="flex gap-12">
+<!-- Node: Majora's Mask -->
+<div class="parchment-card w-44 p-3 rounded-lg border-2 border-primary-container/40 hover:border-primary-container transition-all cursor-pointer">
+<div class="w-full h-20 bg-surface-dim rounded mb-2 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A haunting image of a terrifying moon with a face descending over a dark clock tower. Glowing purple eyes and vibrant tribal masks frame the scene. The visual style is dark fantasy with surrealist lighting, utilizing a palette of deep violet, charcoal, and neon orange to signify the impending doom of Termina." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQhp4U1UVCbmzzBwn9Yh0dU7egpnxdIR8hb369N_epF2SVIS3MxFho0gs4lYtIzjZVqXtKH9R7d6zhqHg5SG-f5Cxi5C3RjfNcePPgOcNf2iV1Im_4Zc601mKl682NMGmxlcLTggidGqSK7m2vfgJxYnJGpZaLSGV2vEgaQpXRZzL5uiqe-k85-apvOsif8H27tMezGmLE1_HoEjcpEbODBmAQKviL2pmElrrTcDZoggxFtneO6Zb4gQ"/>
+</div>
+<span class="font-label-md text-label-md text-primary">MAJORA'S MASK</span>
+</div>
+<!-- Node: Twilight Princess -->
+<div class="parchment-card w-44 p-3 rounded-lg border-2 border-primary-container/40 hover:border-primary-container transition-all cursor-pointer">
+<div class="w-full h-20 bg-surface-dim rounded mb-2 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A gritty, realistic portrait of a wolf and a shadowy figure with a glowing teal stone. The world is bathed in an eerie amber twilight. The art style is painterly and detailed, with a focus on fur textures and ethereal light particles, reflecting the somber and mature tone of the Twilight Realm." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc3Ppe-iu_Jb3p5l9gWdBZwB5bhg9y_Nhbr5Z7gf6AW0Gbz2HytRIwQ-fXepc16eTRsFGokGSXWdYj7ZD01uiqIwjAaZbhbf6gyS3Zy4nKNBsuTd8TLAKkXv0_SwwTk3uE_DqanHaN2LVV4LMx9qRXamZej6hJNgSAsD5vqaYN3dN2guNik0-4-861ymJXTMs2o7I2v85A4d9hEhYImD3sbdBfOwd6t1gmviJ34XN5xhxIES1h72DBeA"/>
+</div>
+<span class="font-label-md text-label-md text-primary">TWILIGHT PRINCESS</span>
+</div>
+</div>
+</div>
+</div>
+<!-- ADULT HERO BRANCH -->
+<div class="absolute top-[540px] left-[550px]">
+<div class="flex items-center gap-4">
+<span class="branch-label font-label-md text-label-md text-tertiary bg-tertiary-container/20 px-1 py-4 rounded border border-tertiary/30 uppercase tracking-widest">Adult Era</span>
+<div class="flex gap-12">
+<!-- Node: Wind Waker -->
+<div class="parchment-card w-44 p-3 rounded-lg border-2 border-primary-container/40 hover:border-primary-container transition-all cursor-pointer">
+<div class="w-full h-20 bg-surface-dim rounded mb-2 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A bright and vibrant cel-shaded ocean scene with a red talking boat and a young hero with large expressive eyes. The waves are stylized like scrolls. The color palette is dominated by brilliant azure, sunny yellow, and crisp white, creating an atmosphere of vast adventure and nautical discovery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHIaG6AYpcU1lRa1y6L33VWuRuRj2xadD06ICaP8OilcW-7xuo4tH2zF1mGNr1zbUXlwXqr7XR5vJAYPxF4_3KuLJspupOLWfTT3v1PAftT5vx3T6-O3DnPllzHhXDm6Rnh_NS-wxZ8ADTauUXj6O3WMDnx7q5YHujNLRHaXlGKjx-tnDkTST274weLOT8bjINhwGCKK0_F_wBNP05YCnHyAu5YvabaSYaFVBuAawEzNqPMaoWDqbxsg"/>
+</div>
+<span class="font-label-md text-label-md text-primary">THE WIND WAKER</span>
+</div>
+<!-- Node: Phantom Hourglass -->
+<div class="parchment-card w-44 p-3 rounded-lg border-2 border-primary-container/40 hover:border-primary-container transition-all cursor-pointer">
+<div class="w-full h-20 bg-surface-dim rounded mb-2 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A steampunk-inspired steamship sailing across a dotted-line map with sea monsters in the margins. An ancient hourglass filled with glowing sand is the focal point. The style is like a physical adventure journal with tea-stained edges, handwritten notes, and mechanical gold-brass details throughout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_JWrevJoPSV6kcUlvGjQJ94iDo5AAxr-ImOzwucR1KE2qSW8Q2XfxK-qaAmcWFH4acwFWbdHuuZKEoKL5vVRqYSwpRpoq-rYxTKj7pO7Aa77I0HBaHoVa_FuwrjEzZaP1dMV84LiXV_nrxLCC5IssU9_kHW9gCqDwWSQlOi4hv1gVToc52513-b-abkNhXJFR59jaZILbNLKWucBGhPDq2mVYVyOSVBzHIsho6GMyfudaGrGaGh_eTw"/>
+</div>
+<span class="font-label-md text-label-md text-primary">PHANTOM HOURGLASS</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-on-secondary-container mt-xl border-t-2 border-primary/30">
+<div class="flex flex-col md:flex-row justify-between items-center gap-lg p-xl max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary-fixed">Hyrule Codex</h3>
+<p class="font-label-md text-label-md text-on-secondary/60">© 2024 Hyrule Codex. All rights reserved. May the Goddess smile upon you.</p>
+</div>
+<div class="flex gap-lg">
+<a class="text-on-secondary/80 hover:text-primary-fixed font-label-md text-label-md transition-all hover:translate-y-[-2px]" href="#">Archives</a>
+<a class="text-on-secondary/80 hover:text-primary-fixed font-label-md text-label-md transition-all hover:translate-y-[-2px]" href="#">Atlas</a>
+<a class="text-on-secondary/80 hover:text-primary-fixed font-label-md text-label-md transition-all hover:translate-y-[-2px]" href="#">Bestiary</a>
+<a class="text-on-secondary/80 hover:text-primary-fixed font-label-md text-label-md transition-all hover:translate-y-[-2px]" href="#">Artifacts</a>
+</div>
+</div>
+</footer>
+<!-- Side Navigation (Mobile/Hidden by default) -->
+<div class="hidden fixed left-0 top-0 h-full w-80 z-[60] p-lg flex flex-col gap-sm bg-surface-dim shadow-xl rounded-r-full transition-transform transform -translate-x-full" id="drawer">
+<div class="flex justify-between items-center mb-lg">
+<span class="font-headline-sm text-headline-sm text-primary">Legend Archive</span>
+<button class="text-on-surface-variant" onclick="toggleDrawer()"><span class="material-symbols-outlined">close</span></button>
+</div>
+<a class="flex items-center gap-md bg-primary-container text-on-primary-container rounded-full px-lg py-md transition-all" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="font-body-lg text-body-lg">World Map</span>
+</a>
+<a class="flex items-center gap-md text-on-surface-variant hover:bg-surface-variant rounded-full px-lg py-md transition-all" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-body-lg text-body-lg">Lore Library</span>
+</a>
+<a class="flex items-center gap-md text-on-surface-variant hover:bg-surface-variant rounded-full px-lg py-md transition-all" href="#">
+<span class="material-symbols-outlined">swords</span>
+<span class="font-body-lg text-body-lg">Master Sword</span>
+</a>
+<a class="flex items-center gap-md text-on-surface-variant hover:bg-surface-variant rounded-full px-lg py-md transition-all" href="#">
+<span class="material-symbols-outlined">castle</span>
+<span class="font-body-lg text-body-lg">Divine Beasts</span>
+</a>
+<a class="flex items-center gap-md text-on-surface-variant hover:bg-surface-variant rounded-full px-lg py-md mt-auto transition-all" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-body-lg text-body-lg">Settings</span>
+</a>
+</div>
+<script>
+        function toggleDrawer() {
+            const drawer = document.getElementById('drawer');
+            drawer.classList.toggle('hidden');
+            if (drawer.classList.contains('-translate-x-full')) {
+                drawer.classList.remove('-translate-x-full');
+            } else {
+                drawer.classList.add('-translate-x-full');
+            }
+        }
+
+        // Add some atmospheric floating movement to nodes
+        document.querySelectorAll('.parchment-card').forEach((card, index) => {
+            const delay = index * 0.2;
+            card.style.animation = `float ${3 + index % 2}s ease-in-out infinite alternate`;
+            card.style.animationDelay = `${delay}s`;
+        });
+
+        // Add float keyframes via JS
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes float {
+                from { transform: translateY(0px); }
+                to { transform: translateY(-8px); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body></html>

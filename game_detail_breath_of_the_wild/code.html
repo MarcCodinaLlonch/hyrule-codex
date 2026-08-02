@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hyrule Codex - Breath of the Wild</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Libre+Franklin:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #fff8f1; /* Using surface color from config */
+            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+            scroll-behavior: smooth;
+        }
+        .parchment-texture {
+            background-image: url("https://www.transparenttextures.com/patterns/vintage-speckles.png");
+        }
+        .engraved-gold {
+            box-shadow: inset 0 1px 0 0 rgba(212, 175, 55, 0.4);
+            border: 1px solid rgba(62, 39, 35, 0.15);
+        }
+        .triforce-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #735c00 50%, transparent);
+            position: relative;
+        }
+        .triforce-divider::after {
+            content: '▲';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #735c00;
+            background: #fff8f1;
+            padding: 0 8px;
+            font-size: 12px;
+        }
+        .hero-mask {
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed": "#241a00",
+                      "error": "#ba1a1a",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed": "#ffe088",
+                      "on-tertiary-fixed-variant": "#2d486d",
+                      "primary-fixed-dim": "#e9c349",
+                      "surface-container": "#fcecce",
+                      "surface-container-low": "#fff2db",
+                      "surface-bright": "#fff8f1",
+                      "tertiary-container": "#9ab4e0",
+                      "tertiary-fixed": "#d5e3ff",
+                      "surface": "#fff8f1",
+                      "on-primary": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed-variant": "#574500",
+                      "secondary-fixed": "#baeed9",
+                      "secondary-fixed-dim": "#9ed1bd",
+                      "inverse-surface": "#38301b",
+                      "tertiary-fixed-dim": "#adc8f5",
+                      "tertiary": "#455f87",
+                      "on-tertiary-fixed": "#001c3b",
+                      "primary-container": "#d4af37",
+                      "surface-variant": "#f0e1c3",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-fixed": "#002117",
+                      "on-surface": "#221b08",
+                      "surface-container-highest": "#f0e1c3",
+                      "on-secondary-fixed-variant": "#1d4f40",
+                      "on-surface-variant": "#4d4635",
+                      "error-container": "#ffdad6",
+                      "primary": "#735c00",
+                      "on-error": "#ffffff",
+                      "background": "#fff8f1",
+                      "surface-tint": "#735c00",
+                      "on-secondary-container": "#3d6d5d",
+                      "secondary-container": "#baeed9",
+                      "on-tertiary-container": "#2b466b",
+                      "secondary": "#376757",
+                      "inverse-on-surface": "#feefd1",
+                      "surface-container-high": "#f6e7c9",
+                      "inverse-primary": "#e9c349",
+                      "on-background": "#221b08",
+                      "surface-dim": "#e7d9bb",
+                      "on-primary-container": "#554300",
+                      "on-error-container": "#93000a",
+                      "outline-variant": "#d0c5af",
+                      "outline": "#7f7663"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-desktop": "32px",
+                      "xs": "4px",
+                      "unit": "4px",
+                      "margin-mobile": "16px",
+                      "md": "16px",
+                      "xl": "40px",
+                      "sm": "8px",
+                      "lg": "24px",
+                      "gutter": "16px"
+              },
+              "fontFamily": {
+                      "headline-md": ["EB Garamond"],
+                      "headline-sm": ["EB Garamond"],
+                      "display-lg": ["EB Garamond"],
+                      "display-lg-mobile": ["EB Garamond"],
+                      "label-md": ["Libre Franklin"],
+                      "body-md": ["Libre Franklin"],
+                      "body-lg": ["Libre Franklin"]
+              },
+              "fontSize": {
+                      "headline-md": ["28px", {"lineHeight": "34px", "fontWeight": "600"}],
+                      "headline-sm": ["22px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "display-lg-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-on-secondary-container/90 dark:bg-on-secondary-container/95 backdrop-blur-md border-b border-primary/20 shadow-sm flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary-fixed cursor-pointer transition-all duration-300 active:scale-95" onclick="toggleDrawer()">menu</span>
+<h1 class="font-headline-md text-headline-md font-bold text-primary-fixed tracking-widest">Hyrule Codex</h1>
+</div>
+<div class="hidden md:flex gap-lg">
+<a class="font-label-md text-label-md text-primary-fixed-dim border-b-2 border-primary-fixed-dim" href="#">Archives</a>
+<a class="font-label-md text-label-md text-on-secondary/80 hover:text-primary-fixed transition-colors" href="#">Atlas</a>
+<a class="font-label-md text-label-md text-on-secondary/80 hover:text-primary-fixed transition-colors" href="#">Bestiary</a>
+</div>
+<span class="material-symbols-outlined text-primary-fixed cursor-pointer transition-all duration-300 active:scale-95">search</span>
+</header>
+<!-- NavigationDrawer Overlay -->
+<div class="fixed inset-0 bg-black/50 z-[55] hidden transition-opacity duration-300 opacity-0" id="drawer-overlay" onclick="toggleDrawer()"></div>
+<!-- NavigationDrawer -->
+<nav class="fixed left-0 top-0 h-full w-80 z-[60] p-lg flex flex-col gap-sm bg-surface dark:bg-surface-dim transform -translate-x-full transition-transform duration-300 ease-in-out bg-surface-container-low shadow-xl" id="nav-drawer">
+<div class="mb-lg px-lg">
+<h2 class="font-headline-sm text-headline-sm text-primary">Legend Archive</h2>
+</div>
+<a class="flex items-center gap-md text-on-surface-variant hover:bg-surface-variant rounded-full px-lg py-md transition-all duration-200" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="font-body-lg text-body-lg">World Map</span>
+</a>
+<a class="flex items-center gap-md bg-primary-container text-on-primary-container rounded-full px-lg py-md transition-all duration-200" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-body-lg text-body-lg">Lore Library</span>
+</a>
+<a class="flex items-center gap-md text-on-surface-variant hover:bg-surface-variant rounded-full px-lg py-md transition-all duration-200" href="#">
+<span class="material-symbols-outlined">swords</span>
+<span class="font-body-lg text-body-lg">Master Sword</span>
+</a>
+<a class="flex items-center gap-md text-on-surface-variant hover:bg-surface-variant rounded-full px-lg py-md transition-all duration-200" href="#">
+<span class="material-symbols-outlined">castle</span>
+<span class="font-body-lg text-body-lg">Divine Beasts</span>
+</a>
+<div class="mt-auto">
+<a class="flex items-center gap-md text-on-surface-variant hover:bg-surface-variant rounded-full px-lg py-md transition-all duration-200" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-body-lg text-body-lg">Settings</span>
+</a>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative w-full h-[60vh] md:h-[75vh] overflow-hidden">
+<div class="absolute inset-0 hero-mask">
+<img class="w-full h-full object-cover" data-alt="An epic, panoramic illustration of Link standing on a high cliff edge overlooking the vast, lush wilderness of Hyrule from Legend of Zelda Breath of the Wild. The lighting is golden-hour sunlight casting long shadows across rolling green hills, distant snowy peaks, and the ruins of a castle shrouded in a dark, swirling purple mist. The style is painterly and atmospheric, with vibrant greens and deep blues of a high-fantasy adventure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkPgopiY3VjPSCQUMO1eo7EXnihCBRSqQjlXcpiJyOaFCthc6YcgMZk0xbEazFsEHtGC7d8rVBa_BXQWjTaSR2E6T1CPGx4eEpBHoB-UXV4G2DtPHJIlgteTQAEiDqZC0cy6xL9Us6Qd0gFoJhUhiGQcWHV6k-s2cKo2jCW34fxvt2z5LIIX2yOACDwfoVeVMFA2j49PyjmK6YefAHEFUHHXSqnXOLexdkK44zcebi-lGi186s2pKKcw"/>
+</div>
+<div class="absolute bottom-0 left-0 right-0 p-margin-mobile md:p-margin-desktop z-10 max-w-7xl mx-auto">
+<div class="inline-block bg-primary-container/90 backdrop-blur-sm px-4 py-1 rounded-sm mb-4 border border-on-primary-container/20">
+<span class="font-label-md text-label-md text-on-primary-container uppercase tracking-widest">Masterpiece</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-2 leading-tight">The Legend of Zelda:<br/>Breath of the Wild</h1>
+<div class="flex flex-wrap gap-md items-center mt-4">
+<div class="flex items-center gap-xs px-3 py-1 bg-surface-container-highest/80 rounded-sm border border-outline/20">
+<span class="material-symbols-outlined text-outline text-sm">calendar_today</span>
+<span class="font-label-md text-label-md text-outline">2017</span>
+</div>
+<div class="flex items-center gap-xs px-3 py-1 bg-surface-container-highest/80 rounded-sm border border-outline/20">
+<span class="material-symbols-outlined text-outline text-sm">videogame_asset</span>
+<span class="font-label-md text-label-md text-outline">Switch / Wii U</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Content Canvas -->
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-xl grid grid-cols-1 lg:grid-cols-12 gap-xl">
+<!-- Main Column -->
+<div class="lg:col-span-8 space-y-xl">
+<!-- Synopsis Card -->
+<article class="parchment-texture bg-surface-container-low p-lg md:p-xl rounded-lg shadow-sm border border-outline/10 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-9xl">auto_stories</span>
+</div>
+<div class="flex items-center gap-sm mb-6">
+<div class="w-10 h-[1px] bg-primary"></div>
+<h2 class="font-headline-sm text-headline-sm text-primary uppercase tracking-widest">The Legend Begins</h2>
+<div class="w-10 h-[1px] bg-primary"></div>
+</div>
+<p class="font-body-lg text-body-lg leading-relaxed text-on-surface-variant italic">
+                        "Wake up, Link..."
+                    </p>
+<p class="font-body-lg text-body-lg leading-relaxed text-on-surface-variant mt-4">
+                        Step into a world of discovery, exploration, and adventure in The Legend of Zelda: Breath of the Wild, a boundary-breaking new game in the acclaimed series. Travel across vast fields, through forests, and to mountain peaks as you discover what has become of the kingdom of Hyrule in this stunning Open-Air adventure. 
+                    </p>
+<p class="font-body-lg text-body-lg leading-relaxed text-on-surface-variant mt-4">
+                        Explore the wilds of Hyrule any way you like—anytime, anywhere! Climb up towers and mountain peaks in search of new destinations, then set your own path to get there and plunge into the wilderness.
+                    </p>
+</article>
+<!-- Protagonists/Villains Bento -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Link -->
+<div class="parchment-texture bg-surface-container-high p-lg rounded-xl flex items-center gap-lg border-2 border-primary/5 hover:border-primary/20 transition-all duration-300">
+<div class="w-24 h-24 rounded-full overflow-hidden border-4 border-primary/20 flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A portrait of Link from Breath of the Wild, wearing his iconic blue Champion's Tunic with white embroidery. He has blonde hair tied back, a determined expression, and is carrying a traveler's bow on his back. The background is a soft, warm watercolor wash of Hylian landscapes. Digital art style with detailed textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbnBIik9Tv125wINkPaj99LwD0AKr8AJGJ5XkN8PRTPKFw6ZSjHgPA-qEAuXPYdQq6hH5sCnalw4NpbYm85IpNgJ8nXcX9sQTOwsJLXMpbHgcCEYR68p0RgAC1yEpz2XlYPowS0OU1HYhGBpigY2lGV_HIMIm78DbwTLYCWyu05RcDAjl5K_QPaU43_-BZhB65ypMSqUlBDMVvhofyh1BYpy_mPYcketomAn-jClbxTH2sNCrl5kv9OQ"/>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Link</h3>
+<p class="font-label-md text-label-md text-secondary uppercase">The Champion</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Awakened from a 100-year slumber to reclaim his destiny.</p>
+</div>
+</div>
+<!-- Zelda -->
+<div class="parchment-texture bg-surface-container-high p-lg rounded-xl flex items-center gap-lg border-2 border-primary/5 hover:border-primary/20 transition-all duration-300">
+<div class="w-24 h-24 rounded-full overflow-hidden border-4 border-primary/20 flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A portrait of Princess Zelda from Breath of the Wild in her research attire, a blue and white outfit with gold trimmings. She has long blonde hair and is holding a Sheikah Slate with a thoughtful, studious expression. Soft, warm lighting with a magical, ethereal glow. High-fantasy digital painting style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-5GX98w2jU9MPzA_QlKS4_vYAGOOCszV1Cs01Eeq_l1BYgfjq_lkSHYP6-8LWeP-gxaa3J4LzNK_Xu4xG0IeCZgMdl4gf9YVtUZ1M8moaRNP972IMd1I-enQS7anJ26lIrL8ponAWgF9dGT6OXQw4Rm0O3aG7ZERaAYu30wGsIWSHu0A9LH-DcSCVYLZdphI7pA2VZb7CHbEpjXnpiFbXqvJfnnSOFh0CGHh7LkvHGOs4fZZiXED1rA"/>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Zelda</h3>
+<p class="font-label-md text-label-md text-secondary uppercase">The Princess</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">A brilliant scholar struggling to unlock her sealing power.</p>
+</div>
+</div>
+</div>
+<!-- Villain Section -->
+<div class="parchment-texture bg-on-secondary-container p-xl rounded-xl text-on-secondary relative overflow-hidden">
+<div class="absolute -right-10 -bottom-10 opacity-20">
+<span class="material-symbols-outlined text-[200px] text-error">volcano</span>
+</div>
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md text-primary-fixed mb-4">Calamity Ganon</h3>
+<p class="font-body-lg text-body-lg text-surface-container-low max-w-2xl">
+                            A primal force of pure malice that brought Hyrule to its knees a century ago. It remains trapped within Hyrule Castle, its corruption spreading like a blight across the land, waiting for the moment of its final rebirth.
+                        </p>
+<div class="mt-6 flex gap-sm">
+<span class="px-3 py-1 bg-error/20 border border-error/50 rounded-full text-xs font-bold tracking-widest uppercase text-error-container">Ancient Threat</span>
+<span class="px-3 py-1 bg-error/20 border border-error/50 rounded-full text-xs font-bold tracking-widest uppercase text-error-container">Malice Embodied</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar -->
+<aside class="lg:col-span-4 space-y-xl">
+<!-- Details Card -->
+<div class="parchment-texture bg-surface-container p-lg rounded-lg border-2 border-primary/10">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-4 border-b border-primary/20 pb-2">Codex Entry</h4>
+<div class="space-y-4">
+<div class="flex justify-between border-b border-outline/10 pb-2">
+<span class="font-label-md text-label-md text-outline">Publisher</span>
+<span class="font-body-md text-body-md font-semibold text-secondary">Nintendo</span>
+</div>
+<div class="flex justify-between border-b border-outline/10 pb-2">
+<span class="font-label-md text-label-md text-outline">Genre</span>
+<span class="font-body-md text-body-md font-semibold text-secondary">Action-Adventure</span>
+</div>
+<div class="flex justify-between border-b border-outline/10 pb-2">
+<span class="font-label-md text-label-md text-outline">Director</span>
+<span class="font-body-md text-body-md font-semibold text-secondary">Hidemaro Fujibayashi</span>
+</div>
+<div class="flex justify-between border-b border-outline/10 pb-2">
+<span class="font-label-md text-label-md text-outline">Producer</span>
+<span class="font-body-md text-body-md font-semibold text-secondary">Eiji Aonuma</span>
+</div>
+</div>
+</div>
+<!-- Connections -->
+<div class="space-y-md">
+<h4 class="font-headline-sm text-headline-sm text-primary flex items-center gap-sm">
+<span class="material-symbols-outlined">link</span>
+                        Chronology
+                    </h4>
+<div class="triforce-divider my-4"></div>
+<!-- Related Item 1 -->
+<a class="group flex items-center gap-md p-md bg-surface-container-lowest hover:bg-primary-container/10 rounded-lg transition-all duration-300 border border-outline/5 hover:border-primary/30" href="#">
+<div class="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Cover art for Skyward Sword showing Link falling through a sky of vibrant clouds on his Loftwing bird. High fantasy style with saturated blues and purples, evoking a legendary origins feel. Soft brushstrokes and magical atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7QkrtBhk81OfPwU6HzGweCf179rd9rEmE0ZiH5qIMs8uY7OvLpn65o3njnwph0ZbYAAvbAVgHyBOaGvE8p2RTz9mM8YinIBJTZ9424sE6rOfTxHRI6KLgQgQbDcXsepNgaVt8Nwbg9eUkN957IJuTcjIzvkxt0GOZYtS_VK4Il3vyEX9-Xr1_rrpXmBmvfrc1W0rHBm5Z4k6uY8tFVQKqCLGrSonyHo-W4keEKDAgSa2vggAFP_1pbQ"/>
+</div>
+<div>
+<p class="font-label-md text-label-md text-outline mb-1 uppercase">Prequel (Timeline)</p>
+<p class="font-headline-sm text-[18px] text-on-surface group-hover:text-primary transition-colors">Skyward Sword</p>
+</div>
+<span class="material-symbols-outlined ml-auto text-outline group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+<!-- Related Item 2 -->
+<a class="group flex items-center gap-md p-md bg-surface-container-lowest hover:bg-primary-container/10 rounded-lg transition-all duration-300 border border-outline/5 hover:border-primary/30" href="#">
+<div class="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Cover art for Tears of the Kingdom featuring Link standing on a floating island high above a vast sea of clouds. He has a new glowing green prosthetic arm and is looking out at a horizon filled with mysterious sky islands. Epic scale with a sense of immense freedom and wonder." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvhrhC10ONJ-3WQMi6NjtQzfIYvgcXC_6u3pIBsS8KFBxRe5QrU2w-PGszrIIA5OWsijPuX9_YNg4yDLszeeL4INUVtXHURaf_PduKvcKTSmbzzDHAr3QhYZOWJsS0dkoLGpv9vei_8MAwAkbyIOA3be9tnmq1tDzFqF--n6CVVp8vH9PkcY8ivqN-8AvcZR3D3rjUNkme8idJWdSYL-RwgZVkyt2roSCx3drfIm4n1rXjV0ph9MN4DA"/>
+</div>
+<div>
+<p class="font-label-md text-label-md text-outline mb-1 uppercase">Direct Sequel</p>
+<p class="font-headline-sm text-[18px] text-on-surface group-hover:text-primary transition-colors">Tears of the Kingdom</p>
+</div>
+<span class="material-symbols-outlined ml-auto text-outline group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+</div>
+</aside></div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-xl bg-on-secondary-container border-t-2 border-primary/30">
+<div class="flex flex-col md:flex-row justify-between items-center gap-lg p-xl max-w-7xl mx-auto">
+<div class="flex flex-col gap-sm">
+<h2 class="font-headline-sm text-headline-sm text-primary-fixed">Hyrule Codex</h2>
+<p class="font-label-md text-label-md text-primary-fixed dark:text-primary-fixed-dim">© 2024 Hyrule Codex. All rights reserved. May the Goddess smile upon you.</p>
+</div>
+<div class="flex gap-lg">
+<a class="font-label-md text-label-md text-on-secondary/80 hover:text-primary-fixed hover:translate-y-[-2px] transition-all" href="#">Archives</a>
+<a class="font-label-md text-label-md text-on-secondary/80 hover:text-primary-fixed hover:translate-y-[-2px] transition-all" href="#">Atlas</a>
+<a class="font-label-md text-label-md text-on-secondary/80 hover:text-primary-fixed hover:translate-y-[-2px] transition-all" href="#">Bestiary</a>
+<a class="font-label-md text-label-md text-on-secondary/80 hover:text-primary-fixed hover:translate-y-[-2px] transition-all" href="#">Artifacts</a>
+</div>
+</div>
+</footer>
+<script>
+        function toggleDrawer() {
+            const drawer = document.getElementById('nav-drawer');
+            const overlay = document.getElementById('drawer-overlay');
+            const isOpen = drawer.classList.contains('translate-x-0');
+            
+            if (isOpen) {
+                drawer.classList.remove('translate-x-0');
+                drawer.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+                overlay.classList.remove('opacity-100');
+                overlay.classList.add('opacity-0');
+            } else {
+                drawer.classList.remove('-translate-x-full');
+                drawer.classList.add('translate-x-0');
+                overlay.classList.remove('hidden');
+                setTimeout(() => {
+                    overlay.classList.remove('opacity-0');
+                    overlay.classList.add('opacity-100');
+                }, 10);
+            }
+        }
+    </script>
+</body></html>

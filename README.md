@@ -24,4 +24,4 @@ _Instructions coming soon._
 
 ## License
 
-Personalproject — not affiliated with Nintendo. All game-related trademarks belong to their respective owners.
+Personal project — not affiliated with Nintendo. All game-related trademarks belong to their respective owners.
