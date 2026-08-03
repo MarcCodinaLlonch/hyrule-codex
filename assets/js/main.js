@@ -4,17 +4,21 @@
    ========================================================== */
 
 /* ---- Cursor glow (index only — no és crític si l'element no existeix) ---- */
-const glowCursor = document.getElementById('glow-cursor');
-if (glowCursor) {
+function initGlowCursor() {
+    const glowCursor = document.getElementById('glow-cursor');
+    if (!glowCursor) return;
+
     document.addEventListener('mousemove', (e) => {
         glowCursor.style.left = e.clientX + 'px';
-        glowCursor.style.top = e.clientY + 'px';
+        glowCursor.style.top  = e.clientY + 'px';
     });
 }
 
 /* ---- Scroll header shrink ---- */
-const header = document.querySelector('header');
-if (header) {
+function initScrollHeader() {
+    const header = document.querySelector('header');
+    if (!header) return;
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             header.classList.add('py-2', 'shadow-md');
@@ -87,13 +91,15 @@ function initDrawer() {
 function initTimelineFloat() {
     document.querySelectorAll('.parchment-card').forEach((card, index) => {
         const delay = index * 0.2;
-        card.style.animation = `float ${3 + index % 2}s ease-in-out infinite alternate`;
+        card.style.animation      = `float ${3 + index % 2}s ease-in-out infinite alternate`;
         card.style.animationDelay = `${delay}s`;
     });
 }
 
 /* ---- Bootstrap on DOM ready ---- */
 document.addEventListener('DOMContentLoaded', () => {
+    initGlowCursor();
+    initScrollHeader();
     initDrawer();
     initTimelineFloat();
 });
