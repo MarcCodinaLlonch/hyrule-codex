@@ -1,17 +1,20 @@
 /* ==========================================================
-   games.css — Estils específics de games.html
+   games.css — Styles specific to the Games page
    Hyrule Codex
    ========================================================== */
 
-/* Dark forest background for the games archive */
-body {
+/* Dark forest background for the games archive.
+   Applied as a wrapper class instead of body to avoid
+   CSS global conflicts in the React SPA. */
+.games-page {
     background-color: #1B4D3E;
     background-image: url("https://www.transparenttextures.com/patterns/dark-leather.png");
     min-height: 100vh;
 }
 
-/* parchment-texture override for games (parchment pattern, not old-map) */
-.parchment-texture {
+/* parchment-texture override for games (parchment pattern, not old-map).
+   Scoped to .games-page to avoid overriding other pages globally. */
+.games-page .parchment-texture {
     background-image: url("https://www.transparenttextures.com/patterns/parchment.png");
 }
 
