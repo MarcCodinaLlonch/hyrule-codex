@@ -4,153 +4,15 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Hyrule Codex | Ancient Theories</title>
+<!-- Fonts + Icons -->
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Libre+Franklin:ital,wght@0,100..900;1,100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CDN -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@100..900&family=Libre+Franklin:wght@100..900&display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-primary-fixed": "#241a00",
-                    "error": "#ba1a1a",
-                    "on-secondary": "#ffffff",
-                    "primary-fixed": "#ffe088",
-                    "on-tertiary-fixed-variant": "#2d486d",
-                    "primary-fixed-dim": "#e9c349",
-                    "surface-container": "#fcecce",
-                    "surface-container-low": "#fff2db",
-                    "surface-bright": "#fff8f1",
-                    "tertiary-container": "#9ab4e0",
-                    "tertiary-fixed": "#d5e3ff",
-                    "surface": "#fff8f1",
-                    "on-primary": "#ffffff",
-                    "surface-container-lowest": "#ffffff",
-                    "on-primary-fixed-variant": "#574500",
-                    "secondary-fixed": "#baeed9",
-                    "secondary-fixed-dim": "#9ed1bd",
-                    "inverse-surface": "#38301b",
-                    "tertiary-fixed-dim": "#adc8f5",
-                    "tertiary": "#455f87",
-                    "on-tertiary-fixed": "#001c3b",
-                    "primary-container": "#d4af37",
-                    "surface-variant": "#f0e1c3",
-                    "on-tertiary": "#ffffff",
-                    "on-secondary-fixed": "#002117",
-                    "on-surface": "#221b08",
-                    "surface-container-highest": "#f0e1c3",
-                    "on-secondary-fixed-variant": "#1d4f40",
-                    "on-surface-variant": "#4d4635",
-                    "error-container": "#ffdad6",
-                    "primary": "#735c00",
-                    "on-error": "#ffffff",
-                    "background": "#fff8f1",
-                    "surface-tint": "#735c00",
-                    "on-secondary-container": "#3d6d5d",
-                    "secondary-container": "#baeed9",
-                    "on-tertiary-container": "#2b466b",
-                    "secondary": "#376757",
-                    "inverse-on-surface": "#feefd1",
-                    "surface-container-high": "#f6e7c9",
-                    "inverse-primary": "#e9c349",
-                    "on-background": "#221b08",
-                    "surface-dim": "#e7d9bb",
-                    "on-primary-container": "#554300",
-                    "on-error-container": "#93000a",
-                    "outline-variant": "#d0c5af",
-                    "outline": "#7f7663"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "spacing": {
-                    "margin-desktop": "32px",
-                    "xs": "4px",
-                    "unit": "4px",
-                    "margin-mobile": "16px",
-                    "md": "16px",
-                    "xl": "40px",
-                    "sm": "8px",
-                    "lg": "24px",
-                    "gutter": "16px"
-            },
-            "fontFamily": {
-                    "headline-md": ["EB Garamond"],
-                    "headline-sm": ["EB Garamond"],
-                    "display-lg": ["EB Garamond"],
-                    "display-lg-mobile": ["EB Garamond"],
-                    "label-md": ["Libre Franklin"],
-                    "body-md": ["Libre Franklin"],
-                    "body-lg": ["Libre Franklin"]
-            },
-            "fontSize": {
-                    "headline-md": ["28px", {"lineHeight": "34px", "fontWeight": "600"}],
-                    "headline-sm": ["22px", {"lineHeight": "28px", "fontWeight": "600"}],
-                    "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "display-lg-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
-                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
-            }
-          },
-        },
-      }
-    </script>
-<style>
-        body {
-            background-color: #1B4D3E; /* Deepest Level 0 Base */
-            background-image: url("https://www.transparenttextures.com/patterns/papyros.png");
-            background-attachment: fixed;
-        }
-        .parchment-card {
-            background-color: #F5E6C8;
-            background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
-            position: relative;
-        }
-        .parchment-card::before {
-            content: '';
-            position: absolute;
-            top: 4px; left: 4px; right: 4px; bottom: 4px;
-            border: 1px solid rgba(62, 39, 35, 0.1);
-            pointer-events: none;
-        }
-        .theory-border {
-            border: 2px solid #3d6d5d; /* Dark secondary container color */
-            mask-image: radial-gradient(circle at center, white 90%, transparent 100%);
-            border-style: double;
-        }
-        .fan-theory-tag {
-            background-color: #1E3A5F;
-            color: #ffffff;
-        }
-        .custom-divider {
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #735c00 50%, transparent);
-            position: relative;
-        }
-        .custom-divider::after {
-            content: '▲';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #735c00;
-            background: #F5E6C8;
-            padding: 0 8px;
-            font-size: 10px;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .fill-icon {
-            font-variation-settings: 'FILL' 1;
-        }
-    </style>
+<!-- Tailwind config (ha d'anar DESPRÉS del CDN) -->
+<script src="assets/js/tailwind.config.js"></script>
+<!-- CSS personalitzat -->
+<link rel="stylesheet" href="assets/css/base.css"/>
+<link rel="stylesheet" href="assets/css/theories.css"/>
 </head>
 <body class="antialiased selection:bg-primary-container selection:text-on-primary-container">
 <!-- TopAppBar -->
@@ -160,13 +22,14 @@
 <button class="text-primary-fixed hover:bg-primary/10 transition-all duration-300 active:scale-95 p-2 rounded-full">
 <span class="material-symbols-outlined">menu</span>
 </button>
-<h1 class="font-headline-md text-headline-md font-bold text-primary-fixed tracking-widest">Hyrule Codex</h1>
+<a href="index.html" class="font-headline-md text-headline-md font-bold text-primary-fixed tracking-widest hover:opacity-80 transition-opacity">Hyrule Codex</a>
 </div>
 <div class="flex items-center gap-md">
 <nav class="hidden md:flex gap-lg">
-<a class="text-on-secondary hover:text-primary-fixed transition-colors font-label-md text-label-md" href="#">Archives</a>
-<a class="text-on-secondary hover:text-primary-fixed transition-colors font-label-md text-label-md" href="#">Atlas</a>
-<a class="text-primary-fixed-dim border-b-2 border-primary-fixed-dim font-label-md text-label-md" href="#">Theories</a>
+<a class="text-on-secondary hover:text-primary-fixed transition-colors font-label-md text-label-md" href="index.html">Home</a>
+<a class="text-on-secondary hover:text-primary-fixed transition-colors font-label-md text-label-md" href="games.html">Games</a>
+<a class="text-on-secondary hover:text-primary-fixed transition-colors font-label-md text-label-md" href="timeline.html">Timeline</a>
+<a class="text-primary-fixed-dim border-b-2 border-primary-fixed-dim font-label-md text-label-md" href="theories.html">Theories</a>
 </nav>
 <button class="text-primary-fixed hover:bg-primary/10 transition-all duration-300 active:scale-95 p-2 rounded-full">
 <span class="material-symbols-outlined">search</span>
@@ -178,7 +41,7 @@
 <!-- Header Section -->
 <section class="mb-xl text-center">
 <span class="text-primary-fixed font-label-md text-label-md uppercase tracking-[0.2em] block mb-2">Speculative Archive</span>
-<h2 class="text-primary-fixed font-display-lg-mobile md:text-display-lg font-display-lg mb-4 italic">Ancient Theories & Hypotheses</h2>
+<h2 class="text-primary-fixed font-display-lg-mobile md:text-display-lg font-display-lg mb-4 italic">Ancient Theories &amp; Hypotheses</h2>
 <div class="custom-divider max-w-xs mx-auto mb-8"></div>
 <p class="text-secondary-fixed font-body-lg text-body-lg max-w-2xl mx-auto">
                 Explore the whispers of the past. These documented theories represent the collective findings of Hyrule's most dedicated scholars and fan-cartographers.
@@ -225,7 +88,7 @@
 </div>
 <h3 class="text-primary font-headline-sm text-headline-sm mb-3 group-hover:text-primary-container transition-colors">The Korok Seeds: Guardians of the Lost Forest Pulse</h3>
 <p class="text-on-surface-variant font-body-md text-body-md mb-6 line-clamp-3">
-                        Is Hestu’s dance more than just a joyful celebration? Scholars theorize that the distribution of seeds across the realm creates a localized magical grid that keeps the Ganon's Malice at bay.
+                        Is Hestu's dance more than just a joyful celebration? Scholars theorize that the distribution of seeds across the realm creates a localized magical grid that keeps the Ganon's Malice at bay.
                     </p>
 <div class="flex items-center justify-between mt-auto">
 <div class="flex gap-sm">
@@ -275,7 +138,7 @@
 <span class="material-symbols-outlined text-[18px]">architecture</span>
 <span>Archived: Sky Era, Year 5</span>
 </div>
-<h3 class="text-primary font-headline-sm text-headline-sm mb-3 group-hover:text-primary-container transition-colors">The Skyward Connection: Gravity & Divine Intent</h3>
+<h3 class="text-primary font-headline-sm text-headline-sm mb-3 group-hover:text-primary-container transition-colors">The Skyward Connection: Gravity &amp; Divine Intent</h3>
 <p class="text-on-surface-variant font-body-md text-body-md mb-6 line-clamp-3">
                         Why do only certain fragments of Hyrule rise? A study of the mineral composition of the floating islands reveals a magnetic resonance only found in the presence of Hylia's grace.
                     </p>
@@ -308,65 +171,37 @@
                 </p>
 </div>
 <div class="flex gap-lg">
-<a class="text-on-secondary/80 hover:text-primary-fixed hover:translate-y-[-2px] transition-all font-label-md text-label-md" href="#">Archives</a>
-<a class="text-on-secondary/80 hover:text-primary-fixed hover:translate-y-[-2px] transition-all font-label-md text-label-md" href="#">Atlas</a>
-<a class="text-on-secondary/80 hover:text-primary-fixed hover:translate-y-[-2px] transition-all font-label-md text-label-md" href="#">Bestiary</a>
-<a class="text-on-secondary/80 hover:text-primary-fixed hover:translate-y-[-2px] transition-all font-label-md text-label-md" href="#">Artifacts</a>
+<a class="text-on-secondary/80 hover:text-primary-fixed hover:translate-y-[-2px] transition-all font-label-md text-label-md" href="index.html">Home</a>
+<a class="text-on-secondary/80 hover:text-primary-fixed hover:translate-y-[-2px] transition-all font-label-md text-label-md" href="games.html">Games</a>
+<a class="text-on-secondary/80 hover:text-primary-fixed hover:translate-y-[-2px] transition-all font-label-md text-label-md" href="timeline.html">Timeline</a>
+<a class="text-on-secondary/80 hover:text-primary-fixed hover:translate-y-[-2px] transition-all font-label-md text-label-md" href="theories.html">Theories</a>
 </div>
 </div>
 </footer>
-<!-- Side Navigation / NavigationDrawer (Hidden by default, used as semantic shell) -->
-<aside class="fixed left-0 top-0 h-full w-80 z-[60] p-lg flex flex-col gap-sm bg-surface dark:bg-surface-dim h-full rounded-r-full shadow-xl -translate-x-full transition-transform duration-300" id="nav-drawer">
+<!-- Side Navigation / NavigationDrawer -->
+<aside class="fixed left-0 top-0 h-full w-80 z-[60] p-lg flex flex-col gap-sm bg-surface dark:bg-surface-dim rounded-r-full shadow-xl -translate-x-full transition-transform duration-300" id="nav-drawer">
 <div class="flex items-center gap-md mb-xl">
 <span class="material-symbols-outlined text-primary text-3xl">menu_book</span>
 <span class="font-headline-sm text-headline-sm text-primary">Legend Archive</span>
 </div>
 <nav class="flex flex-col gap-sm">
-<a class="flex items-center gap-md text-on-surface-variant hover:bg-surface-variant rounded-full px-lg py-md transition-all" href="#">
-<span class="material-symbols-outlined">map</span>
-<span class="font-body-lg text-body-lg">World Map</span>
+<a class="flex items-center gap-md text-on-surface-variant hover:bg-surface-variant rounded-full px-lg py-md transition-all" href="index.html">
+<span class="material-symbols-outlined">home</span>
+<span class="font-body-lg text-body-lg">Home</span>
 </a>
-<a class="flex items-center gap-md text-on-surface-variant hover:bg-surface-variant rounded-full px-lg py-md transition-all" href="#">
-<span class="material-symbols-outlined">menu_book</span>
-<span class="font-body-lg text-body-lg">Lore Library</span>
+<a class="flex items-center gap-md text-on-surface-variant hover:bg-surface-variant rounded-full px-lg py-md transition-all" href="games.html">
+<span class="material-symbols-outlined">videogame_asset</span>
+<span class="font-body-lg text-body-lg">Games</span>
 </a>
-<a class="flex items-center gap-md text-on-surface-variant hover:bg-surface-variant rounded-full px-lg py-md transition-all" href="#">
-<span class="material-symbols-outlined">swords</span>
-<span class="font-body-lg text-body-lg">Master Sword</span>
+<a class="flex items-center gap-md text-on-surface-variant hover:bg-surface-variant rounded-full px-lg py-md transition-all" href="timeline.html">
+<span class="material-symbols-outlined">history_toggle_off</span>
+<span class="font-body-lg text-body-lg">Timeline</span>
 </a>
-<a class="flex items-center gap-md text-on-surface-variant hover:bg-surface-variant rounded-full px-lg py-md transition-all" href="#">
-<span class="material-symbols-outlined">castle</span>
-<span class="font-body-lg text-body-lg">Divine Beasts</span>
+<a class="flex items-center gap-md bg-primary-container text-on-primary-container rounded-full px-lg py-md transition-all" href="theories.html">
+<span class="material-symbols-outlined">lightbulb</span>
+<span class="font-body-lg text-body-lg">Theories</span>
 </a>
-<div class="mt-auto pt-xl">
-<a class="flex items-center gap-md text-on-surface-variant hover:bg-surface-variant rounded-full px-lg py-md transition-all" href="#">
-<span class="material-symbols-outlined">settings</span>
-<span class="font-body-lg text-body-lg">Settings</span>
-</a>
-</div>
 </nav>
 </aside>
-<script>
-        // Simple drawer toggle logic
-        const menuBtn = document.querySelector('header button');
-        const drawer = document.getElementById('nav-drawer');
-        let isOpen = false;
-
-        menuBtn.addEventListener('click', () => {
-            isOpen = !isOpen;
-            if(isOpen) {
-                drawer.classList.remove('-translate-x-full');
-            } else {
-                drawer.classList.add('-translate-x-full');
-            }
-        });
-
-        // Close drawer on outside click
-        document.addEventListener('click', (e) => {
-            if (isOpen && !drawer.contains(e.target) && !menuBtn.contains(e.target)) {
-                isOpen = false;
-                drawer.classList.add('-translate-x-full');
-            }
-        });
-    </script>
+<script src="assets/js/main.js" defer></script>
 </body></html>

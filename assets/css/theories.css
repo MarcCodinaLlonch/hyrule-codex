@@ -1,0 +1,66 @@
+/* ==========================================================
+   theories.css — Estils específics de theories.html
+   Hyrule Codex
+   ========================================================== */
+
+/* Deep forest papyrus background */
+body {
+    background-color: #1B4D3E;
+    background-image: url("https://www.transparenttextures.com/patterns/papyros.png");
+    background-attachment: fixed;
+}
+
+/* Theory card override: beige paper texture, inner border */
+.parchment-card {
+    background-color: #F5E6C8;
+    background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+    position: relative;
+}
+
+.parchment-card::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    border: 1px solid rgba(62, 39, 35, 0.1);
+    pointer-events: none;
+}
+
+/* Double-border theory frame */
+.theory-border {
+    border: 2px solid #3d6d5d;
+    mask-image: radial-gradient(circle at center, white 90%, transparent 100%);
+    border-style: double;
+}
+
+/* Fan theory badge tag */
+.fan-theory-tag {
+    background-color: #1E3A5F;
+    color: #ffffff;
+}
+
+/* Gold gradient divider with triforce marker */
+.custom-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #735c00 50%, transparent);
+    position: relative;
+}
+
+.custom-divider::after {
+    content: '▲';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #735c00;
+    background: #F5E6C8;
+    padding: 0 8px;
+    font-size: 10px;
+}
+
+/* Filled icon variant */
+.fill-icon {
+    font-variation-settings: 'FILL' 1;
+}

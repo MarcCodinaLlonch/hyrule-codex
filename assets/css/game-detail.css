@@ -1,0 +1,46 @@
+/* ==========================================================
+   game-detail.css — Estils específics de game-detail.html
+   Hyrule Codex
+   ========================================================== */
+
+/* Light parchment body */
+body {
+    background-color: #fff8f1;
+    background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+    scroll-behavior: smooth;
+}
+
+/* parchment-texture override: vintage speckles for detail page */
+.parchment-texture {
+    background-image: url("https://www.transparenttextures.com/patterns/vintage-speckles.png");
+}
+
+/* engraved-gold override: subtler on this page */
+.engraved-gold {
+    box-shadow: inset 0 1px 0 0 rgba(212, 175, 55, 0.4);
+    border: 1px solid rgba(62, 39, 35, 0.15);
+}
+
+/* triforce-divider override: linear gradient variant for detail page */
+.triforce-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #735c00 50%, transparent);
+    opacity: 1;
+}
+
+.triforce-divider::after {
+    content: '▲';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #735c00;
+    background: #fff8f1;
+    padding: 0 8px;
+    font-size: 12px;
+}
+
+/* Hero image mask — fades bottom edge to page background */
+.hero-mask {
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}

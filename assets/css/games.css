@@ -1,0 +1,55 @@
+/* ==========================================================
+   games.css — Estils específics de games.html
+   Hyrule Codex
+   ========================================================== */
+
+/* Dark forest background for the games archive */
+body {
+    background-color: #1B4D3E;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-leather.png");
+    min-height: 100vh;
+}
+
+/* parchment-texture override for games (parchment pattern, not old-map) */
+.parchment-texture {
+    background-image: url("https://www.transparenttextures.com/patterns/parchment.png");
+}
+
+/* Decorative corner-bracket border on game cards */
+.decorative-border {
+    position: relative;
+}
+
+.decorative-border::before,
+.decorative-border::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #d4af37;
+}
+
+.decorative-border::before {
+    top: -4px;
+    left: -4px;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.decorative-border::after {
+    bottom: -4px;
+    right: -4px;
+    border-left: 0;
+    border-top: 0;
+}
+
+/* Card hover animation with lift + scale */
+.card-hover {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3),
+                0 10px 10px -5px rgba(0, 0, 0, 0.1);
+}

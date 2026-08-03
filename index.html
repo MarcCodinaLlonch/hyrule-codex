@@ -8,133 +8,14 @@
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700;800&amp;family=Libre+Franklin:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
 <!-- Icons -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind -->
+<!-- Tailwind CDN -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-primary-fixed": "#241a00",
-                    "error": "#ba1a1a",
-                    "on-secondary": "#ffffff",
-                    "primary-fixed": "#ffe088",
-                    "on-tertiary-fixed-variant": "#2d486d",
-                    "primary-fixed-dim": "#e9c349",
-                    "surface-container": "#fcecce",
-                    "surface-container-low": "#fff2db",
-                    "surface-bright": "#fff8f1",
-                    "tertiary-container": "#9ab4e0",
-                    "tertiary-fixed": "#d5e3ff",
-                    "surface": "#fff8f1",
-                    "on-primary": "#ffffff",
-                    "surface-container-lowest": "#ffffff",
-                    "on-primary-fixed-variant": "#574500",
-                    "secondary-fixed": "#baeed9",
-                    "secondary-fixed-dim": "#9ed1bd",
-                    "inverse-surface": "#38301b",
-                    "tertiary-fixed-dim": "#adc8f5",
-                    "tertiary": "#455f87",
-                    "on-tertiary-fixed": "#001c3b",
-                    "primary-container": "#d4af37",
-                    "surface-variant": "#f0e1c3",
-                    "on-tertiary": "#ffffff",
-                    "on-secondary-fixed": "#002117",
-                    "on-surface": "#221b08",
-                    "surface-container-highest": "#f0e1c3",
-                    "on-secondary-fixed-variant": "#1d4f40",
-                    "on-surface-variant": "#4d4635",
-                    "error-container": "#ffdad6",
-                    "primary": "#735c00",
-                    "on-error": "#ffffff",
-                    "background": "#fff8f1",
-                    "surface-tint": "#735c00",
-                    "on-secondary-container": "#3d6d5d",
-                    "secondary-container": "#baeed9",
-                    "on-tertiary-container": "#2b466b",
-                    "secondary": "#376757",
-                    "inverse-on-surface": "#feefd1",
-                    "surface-container-high": "#f6e7c9",
-                    "inverse-primary": "#e9c349",
-                    "on-background": "#221b08",
-                    "surface-dim": "#e7d9bb",
-                    "on-primary-container": "#554300",
-                    "on-error-container": "#93000a",
-                    "outline-variant": "#d0c5af",
-                    "outline": "#7f7663"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "spacing": {
-                    "margin-desktop": "32px",
-                    "xs": "4px",
-                    "unit": "4px",
-                    "margin-mobile": "16px",
-                    "md": "16px",
-                    "xl": "40px",
-                    "sm": "8px",
-                    "lg": "24px",
-                    "gutter": "16px"
-            },
-            "fontFamily": {
-                    "headline-md": ["EB Garamond"],
-                    "headline-sm": ["EB Garamond"],
-                    "display-lg": ["EB Garamond"],
-                    "display-lg-mobile": ["EB Garamond"],
-                    "label-md": ["Libre Franklin"],
-                    "body-md": ["Libre Franklin"],
-                    "body-lg": ["Libre Franklin"]
-            },
-            "fontSize": {
-                    "headline-md": ["28px", {"lineHeight": "34px", "fontWeight": "600"}],
-                    "headline-sm": ["22px", {"lineHeight": "28px", "fontWeight": "600"}],
-                    "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "display-lg-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
-                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
-            }
-          },
-        },
-      }
-    </script>
-<style>
-        .parchment-texture {
-            background-image: url("https://www.transparenttextures.com/patterns/old-map.png");
-            background-repeat: repeat;
-        }
-        .engraved-gold {
-            box-shadow: inset 0 1px 0 0 rgba(255, 224, 136, 0.4), 0 2px 4px rgba(0,0,0,0.2);
-            border: 1px solid #d4af37;
-        }
-        .hero-gradient {
-            background: linear-gradient(to bottom, rgba(27, 77, 62, 0.3), rgba(255, 248, 241, 1));
-        }
-        .triforce-divider {
-            position: relative;
-            height: 1px;
-            background: #7f7663;
-            opacity: 0.3;
-            margin: 2rem 0;
-        }
-        .triforce-divider::after {
-            content: '▲';
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            background: #fff8f1;
-            padding: 0 10px;
-            color: #d4af37;
-            font-size: 12px;
-        }
-    </style>
+<!-- Tailwind config (ha d'anar DESPRÉS del CDN) -->
+<script src="assets/js/tailwind.config.js"></script>
+<!-- CSS personalitzat -->
+<link rel="stylesheet" href="assets/css/base.css"/>
+<link rel="stylesheet" href="assets/css/home.css"/>
+
 </head>
 <body class="bg-background text-on-background font-body-md overflow-x-hidden">
 <!-- TopAppBar -->
@@ -144,13 +25,13 @@
 <button class="text-primary-fixed hover:bg-primary/10 transition-all duration-300 active:scale-95 p-2 rounded-full">
 <span class="material-symbols-outlined">menu</span>
 </button>
-<h1 class="font-headline-md text-headline-md font-bold text-primary-fixed tracking-widest">HYRULE CODEX</h1>
+<a href="index.html" class="font-headline-md text-headline-md font-bold text-primary-fixed tracking-widest hover:opacity-80 transition-opacity">HYRULE CODEX</a>
 </div>
 <nav class="hidden md:flex gap-lg">
-<a class="text-primary-fixed-dim border-b-2 border-primary-fixed-dim font-label-md text-label-md py-1" href="#">Home</a>
-<a class="text-on-secondary/80 hover:text-primary-fixed transition-colors font-label-md text-label-md py-1" href="#">Archives</a>
-<a class="text-on-secondary/80 hover:text-primary-fixed transition-colors font-label-md text-label-md py-1" href="#">Atlas</a>
-<a class="text-on-secondary/80 hover:text-primary-fixed transition-colors font-label-md text-label-md py-1" href="#">Bestiary</a>
+<a class="text-primary-fixed-dim border-b-2 border-primary-fixed-dim font-label-md text-label-md py-1" href="index.html">Home</a>
+<a class="text-on-secondary/80 hover:text-primary-fixed transition-colors font-label-md text-label-md py-1" href="games.html">Games</a>
+<a class="text-on-secondary/80 hover:text-primary-fixed transition-colors font-label-md text-label-md py-1" href="timeline.html">Timeline</a>
+<a class="text-on-secondary/80 hover:text-primary-fixed transition-colors font-label-md text-label-md py-1" href="theories.html">Theories</a>
 </nav>
 <div class="flex items-center gap-sm">
 <button class="text-primary-fixed hover:bg-primary/10 transition-all duration-300 active:scale-95 p-2 rounded-full">
@@ -162,7 +43,7 @@
 <!-- Hero Section -->
 <section class="relative h-screen flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-10000 hover:scale-110" data-alt="A breathtaking landscape of Hyrule featuring rolling green hills, a distant majestic castle under a golden sunset, and floating ancient stone ruins. The lighting is ethereal and warm, with a digital parchment texture overlay that gives the scene a legendary traveler’s journal feel. Deep forest greens and rich gold accents dominate the palette, creating an epic and immersive atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPhDbb4QtlKx5ZZlkybrDFEk43t4PC03juwyhrC2y4RsKptvR6B6gR4cnlBV6BWWDvGSTv_mW2uBs2eWToufuYm0ZZAydSxiKlELJWMmKX7oTCXzgv9NEohq3CBKU_WbXpySYgV6j3nu99zNRnB5DZrn9S1bnZbpbMsh7yF4KSB3ALoflCVpkj5Nix8IVFxzJIIG_jp_-h7fBXj-nvVIIvFBHPt2cWZUQX14m7CGGzx7-cJkGp8DewPw')">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-10000 hover:scale-110" data-alt="A breathtaking landscape of Hyrule featuring rolling green hills, a distant majestic castle under a golden sunset, and floating ancient stone ruins. The lighting is ethereal and warm, with a digital parchment texture overlay that gives the scene a legendary traveler's journal feel. Deep forest greens and rich gold accents dominate the palette, creating an epic and immersive atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPhDbb4QtlKx5ZZlkybrDFEk43t4PC03juwyhrC2y4RsKptvR6B6gR4cnlBV6BWWDvGSTv_mW2uBs2eWToufuYm0ZZAydSxiKlELJWMmKX7oTCXzgv9NEohq3CBKU_WbXpySYgV6j3nu99zNRnB5DZrn9S1bnZbpbMsh7yF4KSB3ALoflCVpkj5Nix8IVFxzJIIG_jp_-h7fBXj-nvVIIvFBHPt2cWZUQX14m7CGGzx7-cJkGp8DewPw')">
 </div>
 <div class="absolute inset-0 hero-gradient"></div>
 </div>
@@ -173,10 +54,10 @@
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-xl max-w-2xl mx-auto italic">
                 Step into the echoes of history. From the birth of the Goddess to the breath of the wild, explore the definitive archive of the kingdom of Hyrule.
             </p>
-<button class="bg-secondary text-on-secondary px-lg py-md font-label-md text-label-md rounded-lg shadow-xl hover:translate-y-[-2px] transition-all duration-300 border-b-4 border-[#1d4f40] flex items-center gap-sm mx-auto">
+<a href="games.html" class="bg-secondary text-on-secondary px-lg py-md font-label-md text-label-md rounded-lg shadow-xl hover:translate-y-[-2px] transition-all duration-300 border-b-4 border-[#1d4f40] flex items-center gap-sm mx-auto w-fit">
                 BEGIN YOUR QUEST
                 <span class="material-symbols-outlined text-sm">auto_stories</span>
-</button>
+</a>
 </div>
 <!-- Scroll Indicator -->
 <div class="absolute bottom-lg left-1/2 -translate-x-1/2 flex flex-col items-center gap-xs opacity-60 animate-bounce">
@@ -189,7 +70,7 @@
 <!-- Bento-inspired Quick Access Cards -->
 <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-xl">
 <!-- Timeline Card -->
-<div class="md:col-span-2 group relative parchment-texture bg-surface-container-low p-lg rounded-xl border border-outline/20 hover:border-primary-container transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer overflow-hidden">
+<a href="timeline.html" class="md:col-span-2 group relative parchment-texture bg-surface-container-low p-lg rounded-xl border border-outline/20 hover:border-primary-container transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer overflow-hidden">
 <div class="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-primary-container rounded-tl-xl opacity-50"></div>
 <div class="flex justify-between items-start mb-lg">
 <div>
@@ -202,9 +83,9 @@
 <span class="text-label-md font-label-md text-secondary">VIEW THE AGES</span>
 <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </div>
-</div>
+</a>
 <!-- Games Card -->
-<div class="group relative parchment-texture bg-surface-container-low p-lg rounded-xl border border-outline/20 hover:border-primary-container transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer">
+<a href="games.html" class="group relative parchment-texture bg-surface-container-low p-lg rounded-xl border border-outline/20 hover:border-primary-container transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer">
 <div class="flex flex-col h-full justify-between">
 <div class="mb-lg">
 <span class="material-symbols-outlined text-primary-container text-3xl mb-sm">videogame_asset</span>
@@ -212,9 +93,9 @@
 </div>
 <p class="font-label-md text-label-md text-on-surface-variant italic">Every legend ever told.</p>
 </div>
-</div>
+</a>
 <!-- Theories Card -->
-<div class="group relative parchment-texture bg-surface-container-low p-lg rounded-xl border border-outline/20 hover:border-primary-container transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer">
+<a href="theories.html" class="group relative parchment-texture bg-surface-container-low p-lg rounded-xl border border-outline/20 hover:border-primary-container transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer">
 <div class="flex flex-col h-full justify-between">
 <div class="mb-lg">
 <span class="material-symbols-outlined text-primary-container text-3xl mb-sm">lightbulb</span>
@@ -222,7 +103,7 @@
 </div>
 <p class="font-label-md text-label-md text-on-surface-variant italic">Deep dives into the unknown.</p>
 </div>
-</div>
+</a>
 <!-- Connections Explorer (Large Card) -->
 <div class="md:col-span-4 group relative parchment-texture bg-surface-container-high p-xl rounded-xl border border-outline/20 hover:border-primary-container transition-all duration-300 shadow-sm flex flex-col md:flex-row items-center gap-xl cursor-pointer">
 <div class="w-full md:w-1/3 aspect-video rounded-lg overflow-hidden border-2 border-primary-container/30">
@@ -294,10 +175,9 @@
                 </p>
 </div>
 <div class="flex gap-lg">
-<a class="text-on-secondary/80 hover:text-primary-fixed transition-transform hover:translate-y-[-2px] font-label-md text-label-md" href="#">Archives</a>
-<a class="text-on-secondary/80 hover:text-primary-fixed transition-transform hover:translate-y-[-2px] font-label-md text-label-md" href="#">Atlas</a>
-<a class="text-on-secondary/80 hover:text-primary-fixed transition-transform hover:translate-y-[-2px] font-label-md text-label-md" href="#">Bestiary</a>
-<a class="text-on-secondary/80 hover:text-primary-fixed transition-transform hover:translate-y-[-2px] font-label-md text-label-md" href="#">Artifacts</a>
+<a class="text-on-secondary/80 hover:text-primary-fixed transition-transform hover:translate-y-[-2px] font-label-md text-label-md" href="games.html">Games</a>
+<a class="text-on-secondary/80 hover:text-primary-fixed transition-transform hover:translate-y-[-2px] font-label-md text-label-md" href="timeline.html">Timeline</a>
+<a class="text-on-secondary/80 hover:text-primary-fixed transition-transform hover:translate-y-[-2px] font-label-md text-label-md" href="theories.html">Theories</a>
 </div>
 <div class="flex gap-md">
 <button class="w-10 h-10 rounded-full bg-primary/20 text-primary-fixed flex items-center justify-center hover:bg-primary/40 transition-all">
@@ -311,24 +191,5 @@
 </footer>
 <!-- Interactive Layer for cursor atmospheric effect -->
 <div class="pointer-events-none fixed top-0 left-0 w-64 h-64 rounded-full bg-primary/5 blur-[100px] z-[-1] transform -translate-x-1/2 -translate-y-1/2" id="glow-cursor"></div>
-<script>
-        // Micro-interaction for cursor glow
-        const glow = document.getElementById('glow-cursor');
-        document.addEventListener('mousemove', (e) => {
-            glow.style.left = e.clientX + 'px';
-            glow.style.top = e.clientY + 'px';
-        });
-
-        // Simple scroll transparency for TopAppBar
-        const header = document.querySelector('header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('py-2', 'bg-on-secondary-container/95');
-                header.classList.remove('py-4', 'bg-on-secondary-container/90');
-            } else {
-                header.classList.add('py-4', 'bg-on-secondary-container/90');
-                header.classList.remove('py-2', 'bg-on-secondary-container/95');
-            }
-        });
-    </script>
+<script src="assets/js/main.js" defer></script>
 </body></html>

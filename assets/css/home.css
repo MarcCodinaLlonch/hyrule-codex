@@ -1,0 +1,9 @@
+/* ==========================================================
+   home.css — Estils específics de index.html
+   Hyrule Codex
+   ========================================================== */
+
+/* Hero gradient overlay */
+.hero-gradient {
+    background: linear-gradient(to bottom, rgba(27, 77, 62, 0.3), rgba(255, 248, 241, 1));
+}
