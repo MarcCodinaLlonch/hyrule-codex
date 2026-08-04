@@ -7,9 +7,7 @@
    Applied as a wrapper class instead of body. */
 .timeline-page {
     background-color: #1B4D3E;
-    background-image:
-        radial-gradient(circle at 50% 50%, rgba(27, 77, 62, 0.8) 0%, rgba(13, 38, 31, 1) 100%),
-        url("https://www.transparenttextures.com/patterns/dark-matter.png");
+    background-image: url("https://www.transparenttextures.com/patterns/dark-leather.png");
     min-height: 100vh;
     overflow-x: hidden;
 }
@@ -52,12 +50,6 @@
     filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.4));
 }
 
-/* Vertical branch labels */
-.branch-label {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    transform: rotate(180deg);
-}
 
 /* Float animation injected via useEffect */
 @keyframes float {

@@ -5,22 +5,15 @@ import { Link } from 'react-router-dom';
  */
 export default function Footer() {
     return (
-        <footer className="bg-on-secondary-container w-full mt-xl border-t-2 border-primary/30">
+        <footer className="bg-on-secondary-container w-full border-t-2 border-primary/30">
             <div className="flex flex-col md:flex-row justify-between items-center gap-lg p-xl max-w-7xl mx-auto">
 
                 {/* Brand */}
                 <div className="flex flex-col gap-sm">
                     <span className="font-headline-sm text-headline-sm text-primary-fixed">HYRULE CODEX</span>
-                    <p className="font-label-md text-label-md text-on-secondary/80 max-w-xs text-center md:text-left">
-                        © 2024 Hyrule Codex. All rights reserved. May the Goddess smile upon you.
+                    <p className="font-label-md text-[11px] leading-tight text-on-secondary/60 max-w-sm text-center md:text-left">
+                        This is an unofficial fan project. The Legend of Zelda and all related characters, names, and assets are trademarks of Nintendo. This site is not affiliated with, endorsed by, or sponsored by Nintendo.
                     </p>
-                </div>
-
-                {/* Navigation links */}
-                <div className="flex gap-lg">
-                    <Link className="text-on-secondary/80 hover:text-primary-fixed transition-transform hover:translate-y-[-2px] font-label-md text-label-md" to="/games">Games</Link>
-                    <Link className="text-on-secondary/80 hover:text-primary-fixed transition-transform hover:translate-y-[-2px] font-label-md text-label-md" to="/timeline">Timeline</Link>
-                    <Link className="text-on-secondary/80 hover:text-primary-fixed transition-transform hover:translate-y-[-2px] font-label-md text-label-md" to="/theories">Theories</Link>
                 </div>
 
                 {/* Social buttons */}

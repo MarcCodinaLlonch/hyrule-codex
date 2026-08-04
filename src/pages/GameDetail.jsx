@@ -54,10 +54,10 @@ export default function GameDetail() {
                             </div>
                             <p className="font-body-lg text-body-lg leading-relaxed text-on-surface-variant italic">"Wake up, Link..."</p>
                             <p className="font-body-lg text-body-lg leading-relaxed text-on-surface-variant mt-4">
-                                Step into a world of discovery, exploration, and adventure in The Legend of Zelda: Breath of the Wild, a boundary-breaking new game in the acclaimed series. Travel across vast fields, through forests, and to mountain peaks as you discover what has become of the kingdom of Hyrule in this stunning Open-Air adventure.
+                                After a slumber lasting an entire century, the Hero awakens to a shattered kingdom reclaimed by nature and haunted by a lingering evil. In this unprecedented open-world journey, the boundaries of Hyrule are limited only by the horizon. From the highest, snow-capped peaks to the deepest valleys, every corner of this ruined land holds a secret waiting to be uncovered by the intrepid explorer.
                             </p>
                             <p className="font-body-lg text-body-lg leading-relaxed text-on-surface-variant mt-4">
-                                Explore the wilds of Hyrule any way you like—anytime, anywhere! Climb up towers and mountain peaks in search of new destinations, then set your own path to get there and plunge into the wilderness.
+                                Without the rigid constraints of destiny, you are free to chart your own course. Scavenge for survival, master forgotten ancient technologies, and decipher the fragmented memories of a fallen era before facing the Calamity that festers at the heart of the kingdom.
                             </p>
                         </article>
 

@@ -72,14 +72,26 @@ export default function Games() {
                 {/* Games Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gutter">
                     {[
-                        { title: 'Ocarina of Time',    year: '1998', era: 'Hero of Time',   console: 'N64', src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDy-V8UqC9QEDvRGHnlo2XrHYSGG8uyZAMB_xM0VqSJuIajgdNmh7F3uz8JKoGrWf-Rjv0bYOJqq8q6yA7_K_s1s9yfwCWaibpzIXnmrrwDtIvUO5EEHutlDO1JSYdWmDlHZvxMNJ2dMXLhoAOXnh8z0mVtwSvkJUcOZpS_zNl95myfEJhLe2eIozqFerv6aEV2GP3IL4i6tDWbIcONR4mBUnda9g__AW4bXUOiEJaDODrDu7d-zR_sDA' },
-                        { title: "Majora's Mask",       year: '2000', era: 'Termina Era',    console: 'N64', src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDzXFZEq6YyszQ2J92_03BCbBs9fGYTji0zJGGy_QZmvUjq1Oag6YzZ-w1sYONXvXRUC-btCEa4Nm42HZ1wLD6733TDOxW6X5983FPvZvTttCLZr2SSyt5ZsjxwqO0B506xqlz953TDh4vVZ33s3mV7uTFE22-gvzBCFwF0WNEz1Vd34UWvGh6uuVD7xrUyP4DCrFPJhAG-oi1HZHnWhaqSR5GFYXvkuhDNvsSeBTvvK0eFDQkrS9e7og' },
-                        { title: 'The Wind Waker',      year: '2002', era: 'Great Sea',      console: 'GCN', src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBkEdKjueKDNAWfhalCnFJxm6OLRkovolHDMrNAeo1QQDh2epI-psZEVGWZ86nlQ_gmMKCR2x_IoRV0t8LJbeRE-UGfuYQQdY09RsNOiA1mBZhnrsfisj3w-pBneUHI_bUp6Q1kzznFuC8kumFFBnXlDj-IpDTf-GEbjFaj0ep2-XbVcZyn8tqmB-I39uqKN9dbGMmObhwY8KWZbRJLkucOLiTzAl5K5JutrUvaCi6mmuXkRv_Fdf1imA' },
-                        { title: 'Twilight Princess',   year: '2006', era: 'Shadow Realm',   console: 'WII', src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCrL5TpQ7QPz6CZiXDqWR6bnUGNO9IaQ5iRiHfvCK_Q-y8JIgl02W6YS6FKIdGTOCXj9Z-uwePm-p3J4UFfdeUfq2efpqjQkbKKGJMotSF8svS_R8OXsZKPmzPpDUdK0Pcgm2K1YsFZtgQQPGUjFCpBsxo7blNqC_MOLwATNvq8nxO_NF0hm7JY59VluzeESMeQIla9kKOAmQvkhsn7kSRwWpCLCSlDiTX3dnZK15iyELLiEhcdIpJOHw' },
-                        { title: 'Breath of the Wild',  year: '2017', era: 'Calamity Era',   console: 'SWI', src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBghrP2UrwSRam9G8ME0Upy4pAUxnK2N3wUaQoPUWVvJQ0DJg7ghmVezZ5dUVGe0GKI_GvxEGgHbcxhigs34i91Y2H8Z2cTehrkrE8HzGRjgjNCtOLr0sLGPzFjjQZEXUwWKjvV7Sen2xrMffbMzHn5fGdl5dO8LYIgVYBhmibFo1DQBsS-bhWgqGafKmRYL33WMW2MbMhQy78hEnFPevPNKqATqEMyKYw4Mtc4WkwinSiuXSpREW1k_w' },
-                        { title: 'A Link to the Past',  year: '1991', era: 'Dark World',     console: 'SNES', src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCN8ZX8edxcWtdp1S5oyNncjdN_bHCgb4_R40sUVy-P65Ql0Xk9LjVvawue06Q2jjGBELNslzUGa2dvQ-pO8hB1bu-otV7AcA2wrtpgTZk-JC0GnKCSvRhBw8A2WIxzuXWP5jZjByfhDAK_RBTBWPPAQ-W8ZLXRPwczzZ_fVNr44HozGrVYeXIDl2w1CmxAlyMhvWXQE4hUL-rfAz1iXGLA2CDpQfd6zQt_fOWX6sZpywZ5yNhGrZMQ' },
-                        { title: 'Skyward Sword',       year: '2011', era: 'Origin Era',     console: 'WII', src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCxVTxQpgyWCFO2PTOZa7xL_7lkJyvr5Pf-hF6ijCPut-BHuLZKFkIvbwRALurfb6HmvhCNBJ08jqvZeCie8pYlFRVN9tlK6zFIjOSHIK584t4xmhRV1zBG5zeL4o59kJ-pz7-LPF6iuESiBWv7aCPJr9PByTHJcjVPNMfBvOzrNkfmQPLYqoH-RcwuXZlMgiy_fMyaSLwIsYgO0t7Vyz6L2mo81e7ZAjiTzvlJ6mJckPVavFAG3ICWmA' },
-                        { title: 'Tears of the Kingdom',year: '2023', era: 'Sky Era',        console: 'SWI', src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDi5qPPhN0lPS9u9SU9m__UqO3a6iibLCC19m75Z2Z24QrBDb27iX4Jr8xMmGPzAPM93c8DYsFDPhlmGLxAdlmzAIQbcdmipG8rxoFxAwmHtwvd2mguvXWlgJFqRw5LLZHVkroEi07EHieQLinOtoJwV_pAx2uZFACfeenYJOe0xUxpua8v_OifhXoJI4ipPw-c_uVXybJMPlVHmai69BcrbeIPsCWGVrz7NopuDMjTs-sG7KdnG1Uamw' },
+                        { title: 'Skyward Sword',            year: '2011', era: 'Origin Era',     console: 'WII', src: 'https://upload.wikimedia.org/wikipedia/en/a/a2/The_Legend_of_Zelda_Skyward_Sword_HD_box_art.png' },
+                        { title: 'The Minish Cap',           year: '2004', era: 'Picori Era',     console: 'GBA', src: 'https://upload.wikimedia.org/wikipedia/en/a/a5/The_Legend_of_Zelda_The_Minish_Cap_GBA_cover.jpg' },
+                        { title: 'Four Swords',              year: '2002', era: 'Unified Era',    console: 'GBA', src: 'https://upload.wikimedia.org/wikipedia/en/9/96/The_Legend_of_Zelda_A_Link_to_the_Past_and_Four_Swords_GBA_cover.jpg' },
+                        { title: 'Ocarina of Time',           year: '1998', era: 'Hero of Time',   console: 'N64', src: 'https://upload.wikimedia.org/wikipedia/en/5/57/The_Legend_of_Zelda_Ocarina_of_Time_N64_cover_art.jpg' },
+                        { title: 'A Link to the Past',         year: '1991', era: 'Dark World',     console: 'SNES', src: 'https://upload.wikimedia.org/wikipedia/en/2/21/The_Legend_of_Zelda_A_Link_to_the_Past_SNES_cover_art.jpg' },
+                        { title: "Link's Awakening",          year: '1993', era: 'Koholint Era',   console: 'GB',  src: 'https://upload.wikimedia.org/wikipedia/en/b/b8/The_Legend_of_Zelda_Link%27s_Awakening_Switch_cover_art.png' },
+                        { title: 'Oracle of Seasons & Ages',year: '2001', era: 'Dual Realms',    console: 'GBC', src: 'https://upload.wikimedia.org/wikipedia/en/0/06/The_Legend_of_Zelda_Oracle_of_Seasons_GBC_cover_art.jpg' },
+                        { title: 'A Link Between Worlds',    year: '2013', era: 'Lorule Era',     console: '3DS', src: 'https://upload.wikimedia.org/wikipedia/en/9/94/The_Legend_of_Zelda_A_Link_Between_Worlds_3DS_cover_art.jpg' },
+                        { title: 'Tri Force Heroes',          year: '2015', era: 'Hytopia Era',    console: '3DS', src: 'https://upload.wikimedia.org/wikipedia/en/e/eb/The_Legend_of_Zelda_Tri_Force_Heroes_3DS_cover_art.jpg' },
+                        { title: 'Echoes of Wisdom',         year: '2024', era: 'Wisdom Era',     console: 'SWITCH', src: 'https://upload.wikimedia.org/wikipedia/en/6/66/The_Legend_of_Zelda_Echoes_of_Wisdom_cover_art.png' },
+                        { title: 'The Legend of Zelda',      year: '1986', era: 'Hyrule Fantasy', console: 'NES', src: 'https://upload.wikimedia.org/wikipedia/en/4/41/Legend_of_zelda_cover_%28with_cartridge%29_gold.png' },
+                        { title: 'The Adventure of Link',    year: '1987', era: 'Triforce Era',   console: 'NES', src: 'https://upload.wikimedia.org/wikipedia/en/a/a2/Zelda_II_The_Adventure_of_Link_NES_box_art.jpg' },
+                        { title: "Majora's Mask",             year: '2000', era: 'Termina Era',    console: 'N64', src: 'https://upload.wikimedia.org/wikipedia/en/6/67/The_Legend_of_Zelda_Majora%27s_Mask_N64_cover_art.jpg' },
+                        { title: 'Twilight Princess',        year: '2006', era: 'Shadow Realm',   console: 'WII', src: 'https://upload.wikimedia.org/wikipedia/en/2/23/The_Legend_of_Zelda_Twilight_Princess_GameCube_cover_art.jpg' },
+                        { title: 'Four Swords Adventures',   year: '2004', era: 'Shadow Era',     console: 'GCN', src: 'https://upload.wikimedia.org/wikipedia/en/4/4c/The_Legend_of_Zelda_Four_Swords_Adventures_GameCube_cover_art.jpg' },
+                        { title: 'The Wind Waker',           year: '2002', era: 'Great Sea',      console: 'GCN', src: 'https://upload.wikimedia.org/wikipedia/en/7/7b/The_Legend_of_Zelda_The_Wind_Waker_GameCube_cover_art.jpg' },
+                        { title: 'Phantom Hourglass',        year: '2007', era: 'Ocean Realm',    console: 'NDS', src: 'https://upload.wikimedia.org/wikipedia/en/0/08/The_Legend_of_Zelda_Phantom_Hourglass_DS_cover_art.jpg' },
+                        { title: 'Spirit Tracks',            year: '2009', era: 'New Hyrule',     console: 'NDS', src: 'https://upload.wikimedia.org/wikipedia/en/e/ee/The_Legend_of_Zelda_Spirit_Tracks_DS_cover_art.jpg' },
+                        { title: 'Breath of the Wild',       year: '2017', era: 'Calamity Era',   console: 'SWITCH', src: 'https://upload.wikimedia.org/wikipedia/en/c/c6/The_Legend_of_Zelda_Breath_of_the_Wild.jpg' },
+                        { title: 'Tears of the Kingdom',     year: '2023', era: 'Sky Era',        console: 'SWITCH', src: 'https://upload.wikimedia.org/wikipedia/en/f/fb/The_Legend_of_Zelda_Tears_of_the_Kingdom_cover_art.jpg' },
                     ].map((game, i) => (
                         <Link
                             key={i}
@@ -93,15 +105,15 @@ export default function Games() {
                                     data-alt={game.title}
                                     src={game.src}
                                 />
-                                <div className="absolute top-2 right-2 bg-primary/90 text-on-primary font-label-md text-[10px] px-2 py-1 rounded-sm uppercase tracking-tighter">{game.console}</div>
+                                <div className="absolute top-2 right-2 bg-primary/90 text-on-primary font-label-md text-[10px] px-2 py-1 rounded-sm uppercase tracking-tighter w-fit">{game.console}</div>
                             </div>
-                            <div className="decorative-border pb-2">
-                                <h3 className="font-headline-sm text-headline-sm text-on-surface mt-2 group-hover:text-primary transition-colors">{game.title}</h3>
+                            <div className="decorative-border pb-2 ">
+                                <h3 className="font-headline-sm text-headline-sm text-on-surface mt-2 ml-2 group-hover:text-primary transition-colors">{game.title}</h3>
                                 <div className="flex justify-between items-center mt-1">
-                                    <span className="font-label-md text-label-md text-on-surface-variant/70">{game.year}</span>
-                                    <span className="font-label-md text-label-md text-primary-container bg-on-primary-container/10 px-2 rounded-full">{game.era}</span>
+                                    <span className="font-label-md text-label-md text-on-surface-variant/70 ml-2">{game.year}</span>
+                                    <span className="font-label-md text-label-md text-primary-container bg-on-primary-container/10 px-2 rounded-full mr-2 mt-1">{game.era}</span>
                                 </div>
-                            </div>
+                            </div> 
                         </Link>
                     ))}
                 </div>
@@ -117,7 +129,7 @@ export default function Games() {
                         UNVEIL MORE RECORDS
                         <span className="material-symbols-outlined">expand_more</span>
                     </button>
-                    <p className="font-label-md text-label-md text-secondary-fixed-dim/60">Showing 8 of 29 Chronicled Adventures</p>
+                    <p className="font-label-md text-label-md text-secondary-fixed-dim/60">Showing 20 of 20 Chronicled Adventures</p>
                 </div>
 
             </main>

@@ -38,7 +38,7 @@ export default function Header({ onMenuClick }) {
     return (
         <header
             ref={headerRef}
-            className="bg-on-secondary-container/90 backdrop-blur-md fixed top-0 w-full z-50 border-b border-primary/20 shadow-sm transition-all duration-300"
+            className="bg-on-secondary-container/90 backdrop-blur-md sticky top-0 w-full z-50 border-b border-primary/20 shadow-sm transition-all duration-300"
         >
             <div className="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-7xl mx-auto">
 
@@ -52,9 +52,22 @@ export default function Header({ onMenuClick }) {
                     </button>
                     <Link
                         to="/"
-                        className="font-headline-md text-headline-md font-bold text-primary-fixed tracking-widest hover:opacity-80 transition-opacity"
+                        className="flex items-center hover:opacity-80 transition-opacity"
+                        aria-label="Hyrule Codex Home"
                     >
-                        HYRULE CODEX
+                        <div 
+                            className="bg-primary-fixed h-8 w-40 md:h-10 md:w-56"
+                            style={{
+                                WebkitMaskImage: 'url(/images/hyrulecodexlogo.png)',
+                                maskImage: 'url(/images/hyrulecodexlogo.png)',
+                                WebkitMaskSize: 'contain',
+                                maskSize: 'contain',
+                                WebkitMaskRepeat: 'no-repeat',
+                                maskRepeat: 'no-repeat',
+                                WebkitMaskPosition: 'left center',
+                                maskPosition: 'left center'
+                            }}
+                        />
                     </Link>
                 </div>
 
@@ -73,6 +86,7 @@ export default function Header({ onMenuClick }) {
                         <span className="material-symbols-outlined">search</span>
                     </button>
                 </div>
+                
 
             </div>
         </header>

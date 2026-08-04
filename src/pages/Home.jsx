@@ -31,7 +31,7 @@ export default function Home() {
                 <div className="absolute inset-0 hero-gradient"></div>
                 <div className="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto pt-24">
                     <p className="font-label-md text-label-md text-secondary uppercase tracking-[0.3em] mb-4 opacity-80">
-                        The Legend of Zelda · Encyclopedia
+                        The Legend of Zelda · Unofficial Fan Archive
                     </p>
                     <h1 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6 leading-tight italic">
                         Chronicles of<br/>a Shattered Kingdom

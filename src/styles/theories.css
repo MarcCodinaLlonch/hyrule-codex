@@ -7,8 +7,7 @@
    Applied as a wrapper class instead of body. */
 .theories-page {
     background-color: #1B4D3E;
-    background-image: url("https://www.transparenttextures.com/patterns/papyros.png");
-    background-attachment: fixed;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-leather.png");
     min-height: 100vh;
 }
 
