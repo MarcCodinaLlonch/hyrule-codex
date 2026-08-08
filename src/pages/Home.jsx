@@ -25,7 +25,7 @@ export default function Home() {
                     <img
                         className="w-full h-full object-cover"
                         data-alt="Epic panoramic view of Hyrule field"
-                        src="/images/hero-bg.png"
+                        src="/images/homeBanner.png"
                     />
                 </div>
                 <div className="absolute inset-0 hero-gradient"></div>

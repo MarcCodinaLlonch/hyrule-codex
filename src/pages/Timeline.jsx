@@ -15,38 +15,38 @@ export default function Timeline() {
     }, []);
 
     const unifiedEra = [
-        { title: 'Skyward Sword', desc: 'The Creation and the Era of Hylia.', src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAr2npzS8P8JxH7eVL76FSeTXrybQZjYPZvaKuUqJpqzRhkGISmE4g-3wJ90AGtCRexV519taYpnZbe_J8heZxY_58teA0iy_twNrSZxBuaQSg4jkzzKBLjBYkMpCVFgL8rk5ua_McsvaWImEanLAt1llaJLE15ViSKwRCEP39MSrHuHQdn2fX4tb4REQbmEUerb7NdqzuCTvQFx6_fCJg3mUOQVJx5qQSo2rsBFECejlunr_pHfAsPYA' },
-        { title: 'The Minish Cap', desc: 'The legend of the Picori and Vaati.', src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBlP0QkQ9713_rV69w9_zUjL_1oQ2yJtQ83r7y7q9s4ZqE0L-Nl0QhB6425_1jC2-2g_h19nFmE79V1qV24R9xK63C38-h95u7K-4xV0xU434ZzE7wU263kL85pC34F9W9yTzX7nQJ5kR78-qP49P35F_P5P7J409S-jD70uJ0g3H6-W-185C34uX2y630V8y3' },
-        { title: 'Four Swords', desc: 'The hero splits to seal the wind mage.', src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC7z_kQ6u1vLzD6q_8mE9_L4LqP33LqE9uQ4K2D6_yT0C6gV304xN9uQ335u_y4kX8qC5mD0E993L23E4yP75x-C340N6yQ8L3gV0E3_3D4-mR_5T0yL7qK0K69N8L448-6TqT2yL8Q8uP690X7xJ35y92Q3-Q48_3yF0_yT2_y0C' },
-        { title: 'Ocarina of Time', desc: 'The era that fractured time itself.', src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBp8DF6UzrcwLpGQcdcInvMq5P0nlK_QxALJH26dvpN4AYU_oCLIPsn-cI7Ag_On-4XpYTOXo76ULLJC-H9Dhb8hYRlbVQ7Pq-g8J5Wl8ScD_SCceCTZF16pmz6eyvhFOIukYmPcOsGwc2pQx3DFuVC1jwS6ld3YQNbxNcAXbVbS32aRSYLmeEUBep7S3OYIcDrSqdC2O2TcrE0kl2JDis8bDiaEx5jq_8g3r2T73u-qvz-NKiqcCjkgg', isAnchor: true }
+        { title: 'Skyward Sword', desc: 'The Creation and the Era of Hylia.', src: '/images/skywardSword.png' },
+        { title: 'The Minish Cap', desc: 'The legend of the Picori and Vaati.', src: '/images/theMinishCap.jpg' },
+        { title: 'Four Swords', desc: 'The hero splits to seal the wind mage.', src: '/images/fourSwordsAdventures.png' },
+        { title: 'Ocarina of Time', desc: 'The era that fractured time itself.', src: '/images/ocarinaOfTime.png', isAnchor: true }
     ];
 
     const fallenHero = [
-        { title: 'A Link to the Past', src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBLH_rPMODKJZKNLEju0HqeRNyWVf3dUY2n5JLckkw6tDSoPUI_fCIIChZVN9bTBrWEk7yTeJI4M71fm7hUoKmzOeYqSPAGEQphwad2dRFTujxL-bNLCETK8EB6etQs6Rk69W_Pb_VcSBFb9wvxd7h9OD2aErr1c4NZNs93xdXXEmd02vPkV8wYIJOEijwjCzZQA8sJY-fM7j0WZgpaKuen1SrH94Yt8IZy2SWlD-YTaEG04XYmg8YLBQ' },
-        { title: "Link's Awakening", src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD6LTHNuYw-PPy3V9kxHuZ3dMVx0jIldZ1sbR8thsrbtt5SU_8Qwkp-4XDuckwGsOFVq9HkaAAEMSb1oY5pE3eHCOPylNjsEqyo_cPVcLS2eUnbF7-EJFCkhIyf1R0uT_90vEuNC7sXUIG9tvol1psO_DDim7momZXr1tSXqDQAdOoNy_QQvfIr8P-Ksvgn347bTPL0LFSo0pnfokzhlvRI1zSRWJj85j2J-7CNHciPLK6w' },
-        { title: 'Oracle of Seasons & Ages', src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB0957zQ7_K5_r_L8-9z990K44yL7zL7v43U73V76Q8LqK7qP22X7E298qPqQyE3D3x48-D0V749_u-U4mR9uC-Q44M603uK6V-7PqTqN7xK4M05Q4Q0NqD4uT8q24L_2_3xM_8y_84vL9E9Q3_9T4V439y70u' },
-        { title: 'A Link Between Worlds', src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB_9y_2D43y9936_uQ03T9-M38N60C_P9mE0TqV6K4uE98V2066uC2mQ70P2P_6T73y2-VqN338u7v49E7N7679y7Q0qT74066060_D8Q0_E6y3_82E_4P0Q2_39X3Q98mK789_y3K4_T' },
-        { title: 'Tri Force Heroes', src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC73489Q_73K2V8qL098M3y-26Q97K3uD_4_3qP40C8v6444T6-NqK24Tq9M84E9T9K2T46q4080P88836yD2E_92P93946C_07D0C09Q7x678q3V73N8qC0D6xL2Pq_y9y_0L_q8V7_2u4_0M2M09Q6044' },
-        { title: 'Echoes of Wisdom', src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDqQ9387x2_T6_yE74V3y8q2-0D6V698m8-0C64_83P8L38V89Q8x0y7V33qQ64E_T72P9qP8_40DqT07C3y2L4886E_0qDq3T4P9M7_8_x30-M2N9M20vC4u7Q39D8P0_3M39_33C9uL7D7Q2363Q' },
-        { title: 'The Legend of Zelda', src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAVrXWvbxXpqC-_RS9tpDjQD3dc-oYqi5YhVUfZ6v67vHOKdIp9wFGafizd40qLepKUf7f-2azu2L9ccSudPWQd7kNtoqAmW1UtjtHNwqW7gJcLg3o1R7ZlgJ_3IXSbVYnS1uafJPwUL5j1Qd2YaenLT4CIshx4V4ERfJwjKpj3KzFPT2UcsEz3ukzflVoxdisOeW16d5Kbcgp7x7-R7rbG4ZRnfi5jjeGf3UUJ8_k5rO_k-GqKEkHjaQ' },
-        { title: 'The Adventure of Link', src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC04uQ0yQ4M_0vD9y94982N03qL40DqM4y9P64Q76u36-22M8E3TqM_24L2u02P44-V7_vQ960N2M9K839082V2K98DqN837L29840vQ6v78V4-672Q-07E20V4T44C333_6_68V9V_Q3N_N' }
+        { title: 'A Link to the Past', src: '/images/aLinkToThePast.png' },
+        { title: "Link's Awakening", src: '/images/aLinksAwakening.png' },
+        { title: 'Oracle of Seasons & Ages', src: '/images/oracleOfSeasons.png' },
+        { title: 'A Link Between Worlds', src: '/images/aLinkBetweenWorlds.png' },
+        { title: 'Tri Force Heroes', src: '/images/TriForceHeroes.png' },
+        { title: 'Echoes of Wisdom', src: '/images/echoesOfKingdom.png' },
+        { title: 'The Legend of Zelda', src: '/images/theLegendOfZeldaNes.png' },
+        { title: 'The Adventure of Link', src: '/images/zelda2TheAdventureOfLink.png' }
     ];
 
     const childEra = [
-        { title: "Majora's Mask", src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBQhp4U1UVCbmzzBwn9Yh0dU7egpnxdIR8hb369N_epF2SVIS3MxFho0gs4lYtIzjZVqXtKH9R7d6zhqHg5SG-f5Cxi5C3RjfNcePPgOcNf2iV1Im_4Zc601mKl682NMGmxlcLTggidGqSK7m2vfgJxYnJGpZaLSGV2vEgaQpXRZzL5uiqe-k85-apvOsif8H27tMezGmLE1_HoEjcpEbODBmAQKviL2pmElrrTcDZoggxFtneO6Zb4gQ' },
-        { title: 'Twilight Princess', src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCc3Ppe-iu_Jb3p5l9gWdBZwB5bhg9y_Nhbr5Z7gf6AW0Gbz2HytRIwQ-fXepc16eTRsFGokGSXWdYj7ZD01uiqIwjAaZbhbf6gyS3Zy4nKNBsuTd8TLAKkXv0_SwwTk3uE_DqanHaN2LVV4LMx9qRXamZej6hJNgSAsD5vqaYN3dN2guNik0-4-861ymJXTMs2o7I2v85A4d9hEhYImD3sbdBfOwd6t1gmviJ34XN5xhxIES1h72DBeA' },
-        { title: 'Four Swords Adventures', src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB232Q_T6V8P4V896q6M04V7Q49P829C0M876K3Q3C8_D_866_M89yq76K70V443-433_T_7_0y7K_V_3V0u86u66C7T92C_Tq8040_D4L22Q44yqK2qL4vV8Q079Q_0E69_C3yV9x8N0u2V06V4L9D' }
+        { title: "Majora's Mask", src: '/images/MajorasMask.png' },
+        { title: 'Twilight Princess', src: '/images/twilightPrincess.png' },
+        { title: 'Four Swords Adventures', src: '/images/fourSwordsAdventures.png' }
     ];
 
     const adultEra = [
-        { title: 'The Wind Waker', src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBHIaG6AYpcU1lRa1y6L33VWuRuRj2xadD06ICaP8OilcW-7xuo4tH2zF1mGNr1zbUXlwXqr7XR5vJAYPxF4_3KuLJspupOLWfTT3v1PAftT5vx3T6-O3DnPllzHhXDm6Rnh_NS-wxZ8ADTauUXj6O3WMDnx7q5YHujNLRHaXlGKjx-tnDkTST274weLOT8bjINhwGCKK0_F_wBNP05YCnHyAu5YvabaSYaFVBuAawEzNqPMaoWDqbxsg' },
-        { title: 'Phantom Hourglass', src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA_JWrevJoPSV6kcUlvGjQJ94iDo5AAxr-ImOzwucR1KE2qSW8Q2XfxK-qaAmcWFH4acwFWbdHuuZKEoKL5vVRqYSwpRpoq-rYxTKj7pO7Aa77I0HBaHoVa_FuwrjEzZaP1dMV84LiXV_nrxLCC5IssU9_kHW9gCqDwWSQlOi4hv1gVToc52513-b-abkNhXJFR59jaZILbNLKWucBGhPDq2mVYVyOSVBzHIsho6GMyfudaGrGaGh_eTw' },
-        { title: 'Spirit Tracks', src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC8T0P67L0E2Lq3T66y093D8N6v66qT7Q063q7Q39uDqT0D6638K0vK8M4M8-q3_y7Q6M36D9P7M8C236E08M82V4_Q2L4v0T7uM60E97D40D36V6M3yQ4v3y9T74D4q324Q_C_0v0V2vK38M4yD' }
+        { title: 'The Wind Waker', src: '/images/theWindWaker.png' },
+        { title: 'Phantom Hourglass', src: '/images/phantomHourglass.png' },
+        { title: 'Spirit Tracks', src: '/images/spiritTracks.png' }
     ];
 
     const wildsEra = [
-        { title: 'Breath of the Wild', src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD870_P0Q3V2_9N837V6V2E4Q8M4C0-89q4D_4M2004L2N80vE43M063990M89q39M9K4V2D642D_C9yM276M076P779Q2363V8yD0E80E8T7V2u7v02K7u0v2q7D2T2N80v6323_yqE82V88y7C' },
-        { title: 'Tears of the Kingdom', src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD_D226C2Q8q6L28V8E8T396K6P3_M4Q4M2E36D96860E2_K6780_38M8V264T2294N24P808qK92V6323_0L7M70V3_L2M786y7q2N0C2Q3v3M4_0u4vK3N_0D_03960y2Q7T2T7v2q0v3E9_0V' }
+        { title: 'Breath of the Wild', src: '/images/breathOfTheWild.png' },
+        { title: 'Tears of the Kingdom', src: '/images/tearsOfTheKingdom.png' }
     ];
 
     const GameCard = ({ game }) => (
@@ -60,7 +60,7 @@ export default function Timeline() {
                     </div>
                 )}
                 <div className="w-full h-24 bg-surface-dim rounded mb-2 overflow-hidden">
-                    <img className={`w-full h-full object-cover ${game.isAnchor ? '' : 'grayscale hover:grayscale-0 transition-all duration-500'}`} data-alt={game.title} src={game.src} />
+                    <img className="w-full h-full object-cover transition-all duration-500 hover:scale-105" data-alt={game.title} src={game.src} />
                 </div>
                 <span className={`font-label-md text-label-md ${game.isAnchor ? 'text-primary font-bold text-[16px]' : 'text-primary'}`}>{game.title.toUpperCase()}</span>
                 {game.desc && (

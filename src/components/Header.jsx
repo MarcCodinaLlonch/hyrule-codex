@@ -56,18 +56,10 @@ export default function Header({ onMenuClick }) {
                         className="flex items-center hover:opacity-80 transition-opacity"
                         aria-label="Hyrule Codex Home"
                     >
-                        <div 
-                            className="bg-primary-fixed h-8 w-40 md:h-10 md:w-56"
-                            style={{
-                                WebkitMaskImage: 'url(/images/hyrulecodexlogo.png)',
-                                maskImage: 'url(/images/hyrulecodexlogo.png)',
-                                WebkitMaskSize: 'contain',
-                                maskSize: 'contain',
-                                WebkitMaskRepeat: 'no-repeat',
-                                maskRepeat: 'no-repeat',
-                                WebkitMaskPosition: 'left center',
-                                maskPosition: 'left center'
-                            }}
+                        <img 
+                            src="/images/hyrulecodexlogo.png" 
+                            alt="Hyrule Codex Logo" 
+                            className="h-6 md:h-8 w-auto object-contain object-left" 
                         />
                     </Link>
                 </div>

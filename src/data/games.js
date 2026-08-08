@@ -20,7 +20,7 @@ export const games = [
     }
   ],
   category: 'Masterpiece',
-  heroImage: '',
+  heroImage: '/images/skywardSword.png',
   tagline: '"The legend of the Zelda universe begins here."',
   synopsis: [
     "In the floating city of Skyloft, high above an impenetrable barrier of clouds, a young knight-in-training named Link lives a peaceful life. This tranquility is shattered when his closest friend, Zelda, is swept beneath the clouds by a dark tornado. Guided by Fi, the mysterious spirit of the Goddess Sword, Link must descend to the forgotten Surface—a dangerous, untamed land—to rescue her.",
@@ -37,25 +37,25 @@ export const games = [
       name: 'Link',
       role: 'The Chosen Hero',
       desc: "A sleepy but courageous student at the Knight Academy in Skyloft. He is chosen by the Goddess Hylia to wield the Goddess Sword and descend to the Surface to protect Zelda and defeat the rising evil.",
-      src: ''
+      src: '/images/link.png'
     },
     {
       name: 'Zelda',
       role: 'Mortal Reincarnation of Hylia',
       desc: "Link's childhood friend whose cheerful demeanor hides a grand destiny. She must awaken to her true identity as the mortal reincarnation of the Goddess Hylia to maintain the seal on Demise.",
-      src: ''
+      src: '/images/zelda.png'
     },
     {
       name: 'Fi',
       role: 'Spirit of the Goddess Sword',
       desc: "An analytical, AI-like spirit residing within the Goddess Sword. Created by Hylia, she guides Link with logical probability assessments and serves as his constant companion.",
-      src: ''
+      src: '/images/fi.png'
     },
     {
       name: 'Groose',
       role: 'Knight Academy Bully turned Ally',
       desc: "Initially an arrogant rival to Link who harbors a crush on Zelda. He follows Link to the Surface, undergoing significant character growth to become a crucial and brave ally in the fight against Demise.",
-      src: ''
+      src: '/images/groose.png'
     }
   ],
   timeline: { 
@@ -67,14 +67,14 @@ export const games = [
       relation: 'Chronological Successor', 
       slug: 'the-legend-of-zelda-the-minish-cap', 
       title: 'The Legend of Zelda: The Minish Cap', 
-      src: '' 
+      src: '/images/groose.png' 
     }
   ],
   villain: {
     name: 'Demise',
     desc: "The primordial Demon King who sought to conquer the world and claim the Triforce. Though sealed away by Hylia in the ancient past, he breaks free. Upon his defeat, his lingering hatred establishes a curse that dooms the bloodline of the Goddess and the spirit of the Hero to an eternal cycle of conflict.",
     tags: ['demon-king', 'origin-of-evil', 'the-imprisoned'],
-    src: ''
+    src: '/images/demise.png'
   },
   mechanics: [
     { 
@@ -148,7 +148,7 @@ export const games = [
     { platform: 'Nintendo Switch (Nintendo Classics / GBA app)', year: 2023, note: 'Added to the Game Boy Advance library available through Nintendo Switch Online + Expansion Pack.' }
   ],
   category: 'Classic',
-  heroImage: '',
+  heroImage: '/images/theMinishCap.jpg',
   tagline: '"A hat\u2019s tale, a hero\u2019s trial."', // VERIFICAR - no official English tagline is consistently documented for this title; phrased to evoke the plot without claiming to be an official marketing quote.
   synopsis: [
     'During the annual Picori Festival in Hyrule Town, a sword-fighting tournament is held to commemorate the legend of the Picori, a race of tiny beings said to have gifted Hyrule the Picori Blade and Light Force generations earlier to seal away evil. The festival\u2019s reigning champion, a mysterious swordsman named Vaati, shatters the Picori Blade and unleashes chaos, turning Princess Zelda to stone in the process. With the kingdom\u2019s only line of defense broken, the elderly Minish craftsman Ezlo, magically bonded to Link\u2019s head as a living cap, guides the young hero on a quest to reforge the blade into the legendary Four Sword.',
@@ -165,29 +165,30 @@ export const games = [
       name: 'Link',
       role: 'The Hero of Hyrule',
       desc: 'A young boy chosen to wield the shattered Picori Blade. Guided by Ezlo, he learns to shrink to Minish size and eventually to split into four copies of himself using the reforged Four Sword.',
-      src: ''
+      src: '/images/link.png'
     },
     {
       name: 'Princess Zelda',
       role: 'Princess of Hyrule',
       desc: 'Turned to stone by Vaati after the Picori Blade shatters. Her condition drives the urgency of Link\u2019s quest, and she plays a supporting role once restored near the story\u2019s end.',
-      src: ''
+      src: '/images/zelda.png'
     },
     {
       name: 'Ezlo',
       role: 'The Minish Cap',
       desc: 'An ill-tempered but wise Minish elder cursed into the form of a talking cap worn by Link. He grants Link the ability to shrink and serves as mentor, guide, and comic relief throughout the adventure.',
-      src: ''
+      src: '/images/ezlo.png'
     }
   ],
   timeline: { era: 'era-of-origins', eraLabel: 'Era of Origins' },
   relatedGames: [
-    { relation: 'Related Legend (Four Sword lore)', slug: 'four-swords', title: 'The Legend of Zelda: Four Swords', src: '' },
-    { relation: 'Related Legend (Four Sword lore)', slug: 'four-swords-adventures', title: 'The Legend of Zelda: Four Swords Adventures', src: '' },
-    { relation: 'Later Era (same branch)', slug: 'a-link-to-the-past', title: 'The Legend of Zelda: A Link to the Past', src: '' }
+    { relation: 'Related Legend (Four Sword lore)', slug: 'four-swords', title: 'The Legend of Zelda: Four Swords', src: '/images/ezlo.png' },
+    { relation: 'Related Legend (Four Sword lore)', slug: 'four-swords-adventures', title: 'The Legend of Zelda: Four Swords Adventures', src: '/images/fourSwordsAdventures.png' },
+    { relation: 'Later Era (same branch)', slug: 'a-link-to-the-past', title: 'The Legend of Zelda: A Link to the Past', src: '/images/aLinkToThePast.png' }
   ],
   villain: {
     name: 'Vaati',
+    src: '/images/vaati.png',
     desc: 'Once Ezlo\u2019s apprentice among the Minish, Vaati grew resentful and obsessed with the Light Force, a wish-granting power said to be sealed within Hyrule. His jealousy and hunger for power led him to betray and curse Ezlo, shatter the Picori Blade to break Hyrule\u2019s ancient seal, and turn Princess Zelda to stone. His transformation from a curious, gifted Minish into a wind-wielding sorcerer establishes him as the origin point for one of the series\u2019 most recurring antagonists, later reappearing in Four Swords and Four Swords Adventures.',
     tags: ['Sorcerer', 'Wind Magic', 'Betrayal']
   },
@@ -231,7 +232,7 @@ export const games = [
     { platform: 'Nintendo Switch', year: 2021, note: 'Made available through the Nintendo Switch Online + Expansion Pack N64 app.' }
   ],
   category: 'Masterpiece',
-  heroImage: '',
+  heroImage: '/images/ocarinaOfTime.png',
   tagline: '"It\'s dangerous to go alone... but this time, you won\'t be a child forever."', // VERIFICAR - paraphrased, not an official confirmed in-game quote
   synopsis: [
     'In the kingdom of Hyrule, a young boy without a fairy named Link is summoned by the Great Deku Tree, guardian spirit of the Kokiri Forest, who has been cursed by a dark force. Before succumbing, the Deku Tree reveals that Link is destined to stop Ganondorf, the ambitious leader of the Gerudo, who seeks to obtain the sacred relic known as the Triforce and plunge Hyrule into darkness. Entrusted with the Kokiri\'s Emerald, Link is sent to Hyrule Castle, where he meets Princess Zelda and learns of a prophecy involving three Spiritual Stones and the Ocarina of Time, the keys to the Sacred Realm where the Triforce resides.',
@@ -248,23 +249,24 @@ export const games = [
       name: 'Link',
       role: 'The Hero of Time',
       desc: 'A boy raised among the Kokiri who discovers he is not one of them and is chosen by destiny to wield the Master Sword and prevent Ganondorf from claiming the Triforce.',
-      src: ''
+      src: '/images/link.png'
     },
     {
       name: 'Princess Zelda',
       role: 'Princess of Hyrule / Sheik',
       desc: 'Heir to the royal family who foresees Ganondorf\'s betrayal and disguises herself as the Sheikah Sheik to guide adult Link while hiding from Ganondorf\'s forces.',
-      src: ''
+      src: '/images/zelda.png'
     }
   ],
   timeline: { era: 'child-era-timeline', eraLabel: 'Child Era Timeline' }, // VERIFICAR - OoT is the branching point of the official timeline (splits into three paths); it is conventionally grouped here alongside Majora's Mask, but this categorization is a simplification
   relatedGames: [
-    { relation: 'Direct Sequel', slug: 'majoras-mask', title: 'The Legend of Zelda: Majora\'s Mask', src: '' },
-    { relation: 'Prequel (Era of Origins)', slug: 'skyward-sword', title: 'The Legend of Zelda: Skyward Sword', src: '' },
-    { relation: 'Remake', slug: 'ocarina-of-time-3d', title: 'The Legend of Zelda: Ocarina of Time 3D', src: '' }
+    { relation: 'Direct Sequel', slug: 'majoras-mask', title: 'The Legend of Zelda: Majora\'s Mask', src: '/images/MajorasMask.png' },
+    { relation: 'Prequel (Era of Origins)', slug: 'skyward-sword', title: 'The Legend of Zelda: Skyward Sword', src: '/images/skywardSword.png' },
+    { relation: 'Remake', slug: 'ocarina-of-time-3d', title: 'The Legend of Zelda: Ocarina of Time 3D', src: '/images/ocarinaOfTime.png' }
   ],
   villain: {
     name: 'Ganondorf',
+    src: '/images/ganondorf.png',
     desc: 'The sole male born to the Gerudo in a century, Ganondorf rose to become their leader and set his sights on Hyrule\'s legendary Triforce, driven by ambition and a desire to rule. He infiltrates the royal family\'s trust, manipulates events to trigger the destruction of the Kokiri Forest and Hyrule Castle Town, and ultimately follows Link into the Sacred Realm, where his imbalanced heart causes the Triforce to split, leaving him with only the Triforce of Power. This transforms him into the demonic Ganon, whose tyranny defines the game\'s second half.',
     tags: ['Gerudo', 'Triforce of Power', 'Ganon']
   },
@@ -313,7 +315,7 @@ export const games = [
     { platform: 'Nintendo Switch', year: 2021, note: 'Made available through the Nintendo Switch Online + Expansion Pack N64 app.' }
   ],
   category: 'Masterpiece',
-  heroImage: '',
+  heroImage: '/images/MajorasMask.png',
   tagline: '"You\'ve met with a terrible fate, haven\'t you?"',
   synopsis: [
     'Shortly after the events of Ocarina of Time, Link rides through the Lost Woods searching for a lost friend when he is ambushed by the mischievous Skull Kid, who is wearing a sinister, sentient artifact called Majora\'s Mask and is accompanied by two fairies, Tatl and Tael. The Skull Kid steals Link\'s horse Epona and his ocarina, transforms him into a Deku Scrub, and flees into a strange, decaying version of Hyrule known as Termina. Trapped in this new world, Link learns that the Skull Kid, empowered by the mask\'s dark magic, has set the moon on a collision course with Clock Town, with only three days remaining before impact.',
@@ -330,23 +332,24 @@ export const games = [
       name: 'Link',
       role: 'The Hero of Time',
       desc: 'Still searching for his lost friend after the events of Ocarina of Time, Link is pulled into the parallel world of Termina, where he must relive the same three days to prevent the moon from destroying Clock Town.',
-      src: ''
+      src: '/images/link.png'
     },
     {
       name: 'Tatl',
       role: 'Fairy Companion',
       desc: 'A fairy separated from her twin brother Tael by the Skull Kid, who reluctantly guides and assists Link throughout his journey in Termina.',
-      src: ''
+      src: '/images/tatl&tael.png'
     }
   ],
   timeline: { era: 'child-era-timeline', eraLabel: 'Child Era Timeline' },
   relatedGames: [
-    { relation: 'Direct Sequel', slug: 'majoras-mask', title: 'The Legend of Zelda: Majora\'s Mask', src: '' }, // VERIFICAR - self-reference left by template pattern, should likely be removed or corrected
-    { relation: 'Direct Prequel', slug: 'ocarina-of-time', title: 'The Legend of Zelda: Ocarina of Time', src: '' },
-    { relation: 'Remake', slug: 'majoras-mask-3d', title: 'The Legend of Zelda: Majora\'s Mask 3D', src: '' }
+    { relation: 'Direct Sequel', slug: 'majoras-mask', title: 'The Legend of Zelda: Majora\'s Mask', src: '/images/MajorasMask.png' }, // VERIFICAR - self-reference left by template pattern, should likely be removed or corrected
+    { relation: 'Direct Prequel', slug: 'ocarina-of-time', title: 'The Legend of Zelda: Ocarina of Time', src: '/images/ocarinaOfTime.png' },
+    { relation: 'Remake', slug: 'majoras-mask-3d', title: 'The Legend of Zelda: Majora\'s Mask 3D', src: '/images/MajorasMask.png' }
   ],
   villain: {
     name: 'Majora',
+    src: '/images/majoraTheMask.png',
     desc: 'An ancient, malevolent entity bound within a cursed mask, said to have been used in forbidden rituals so dangerous it was sealed away. After being discarded, the mask was found by the Skull Kid, whose loneliness and resentment made him vulnerable to its corrupting influence, granting him immense power at the cost of his free will. Majora\'s true motivations remain deliberately ambiguous and chaotic, driven less by conquest than by a desire to spread despair, culminating in its attempt to crash the moon into Termina.',
     tags: ['majoras-mask', 'skull-kid', 'termina']
   },
@@ -388,7 +391,7 @@ export const games = [
     { platform: 'Wii U', year: 2016, note: 'Remastered as "Twilight Princess HD" with upgraded visuals, amiibo functionality, and a redesigned item management system.' }
   ],
   category: 'Masterpiece',
-  heroImage: '',
+  heroImage: '/images/twilightPrincess.png',
   tagline: '"When the world is bathed in the half light of dusk, strange things begin to happen."',
   synopsis: [
     'In the pastoral village of Ordon, the young ranch hand Link is asked to deliver a gift to Hyrule Castle when a mysterious dark twilight sweeps across the land, transforming him into a wolf and pulling him into a shadowy alternate dimension. Trapped in wolf form, Link is aided by Midna, an imp-like being who guides him and reveals that the twilight is spreading from the ruined Hyrule as the sinister Zant, self-proclaimed King of the Twilight, seizes control of the Twilight Realm and its people, the Twili. To restore the light and reclaim his human form, Link must journey through Hyrule\'s provinces, banishing twilight from each region with the aid of a group of monkeys, the Sky Book, and the true Light Spirits.',
@@ -405,22 +408,23 @@ export const games = [
       name: 'Link',
       role: 'The Hero\'s Shade\'s Successor / Wolf Link',
       desc: 'A humble goat herder from Ordon Village who is drawn into the Twilight Realm\'s crisis, gaining the ability to transform into a wolf and trained by the spectral Hero\'s Shade in advanced swordsmanship.',
-      src: ''
+      src: '/images/link.png'
     },
     {
       name: 'Midna',
       role: 'Twilight Imp / True Princess of the Twili',
       desc: 'A sarcastic, imp-like figure who accompanies Link throughout his journey, later revealed to be the rightful ruler of the Twili people, cursed and overthrown by Zant.',
-      src: ''
+      src: '/images/midna.png'
     }
   ],
   timeline: { era: 'adult-era-timeline', eraLabel: 'Adult Era Timeline' },
   relatedGames: [
-    { relation: 'Same Era', slug: 'four-swords-adventures', title: 'The Legend of Zelda: Four Swords Adventures', src: '' },
-    { relation: 'Remaster', slug: 'twilight-princess-hd', title: 'The Legend of Zelda: Twilight Princess HD', src: '' }
+    { relation: 'Same Era', slug: 'four-swords-adventures', title: 'The Legend of Zelda: Four Swords Adventures', src: '/images/fourSwordsAdventures.png' },
+    { relation: 'Remaster', slug: 'twilight-princess-hd', title: 'The Legend of Zelda: Twilight Princess HD', src: '/images/twilightPrincess.png' }
   ],
   villain: {
     name: 'Ganondorf',
+    src: '/images/ganondorf.png',
     desc: 'Executed by Hyrule\'s sages for his past crimes against the kingdom, Ganondorf survives his execution due to the Triforce of Power and is banished to the Twilight Realm. There he manipulates the ambitious sorcerer Zant, granting him god-like power over twilight magic in exchange for serving as his puppet ruler, allowing Ganondorf to orchestrate the corruption of Hyrule from the shadows while avoiding direct exposure until the story\'s climax.',
     tags: ['ganondorf', 'triforce-of-power', 'twilight-realm']
   },
@@ -459,7 +463,7 @@ export const games = [
   platform: 'Nintendo GameCube',
   platformHistory: [],
   category: 'Spin-off',
-  heroImage: '',
+  heroImage: '/images/fourSwordsAdventures.png',
   tagline: '"A hero divided is a hero multiplied."', // VERIFICAR - paraphrased summary of the game's premise, not a confirmed official in-game quote
   synopsis: [
     'Years after sealing away the Four Sword, which once split its wielder into four to defeat the Wind Mage Vaati, Princess Zelda senses a dark presence stirring in Hyrule and travels with Link to the Four Sword Sanctuary to investigate. Before Zelda can act, she and the other maidens of Hyrule are turned to stone by a mysterious force, and Link, driven by urgency, draws the Four Sword despite the ancient warning that it also releases whatever evil it seals. In doing so, he splits into four identical Links and inadvertently frees Vaati, who has waited within the blade for another chance to conquer Hyrule.',
@@ -476,23 +480,24 @@ export const games = [
       name: 'Link (Four Links)',
       role: 'The Hero, split into Four',
       desc: 'Upon drawing the Four Sword, Link splits into four identical copies (traditionally colored green, red, blue, and violet) who must cooperate to solve puzzles, defeat enemies, and free Hyrule from Vaati\'s renewed threat.',
-      src: ''
+      src: '/images/link.png'
     },
     {
       name: 'Princess Zelda',
       role: 'Princess of Hyrule',
       desc: 'One of the maidens turned to stone by Vaati\'s dark magic at the story\'s outset, whose rescue drives much of Link\'s early motivation across the game\'s stages.',
-      src: ''
+      src: '/images/zelda.png'
     }
   ],
   timeline: { era: 'adult-era-timeline', eraLabel: 'Adult Era Timeline' }, // VERIFICAR - officially placed in the Child/Downfall-adjacent branch per Hyrule Historia's timeline chart; grouping it here follows common simplified categorization near Twilight Princess and A Link to the Past
   relatedGames: [
-    { relation: 'Direct Sequel', slug: 'four-swords', title: 'The Legend of Zelda: Four Swords', src: '' },
-    { relation: 'Same Era', slug: 'a-link-to-the-past', title: 'The Legend of Zelda: A Link to the Past', src: '' },
-    { relation: 'Same Era', slug: 'twilight-princess', title: 'The Legend of Zelda: Twilight Princess', src: '' }
+    { relation: 'Direct Sequel', slug: 'four-swords', title: 'The Legend of Zelda: Four Swords', src: '/images/zelda.png' },
+    { relation: 'Same Era', slug: 'a-link-to-the-past', title: 'The Legend of Zelda: A Link to the Past', src: '/images/aLinkToThePast.png' },
+    { relation: 'Same Era', slug: 'twilight-princess', title: 'The Legend of Zelda: Twilight Princess', src: '/images/twilightPrincess.png' }
   ],
   villain: {
     name: 'Vaati',
+    src: '/images/vaati.png',
     desc: 'A Wind Mage born from the corruption of a Minish tribesman\'s heart, Vaati was previously sealed within the Four Sword after his defeat by a past hero. Freed once more when Link draws the blade, he seeks to conquer Hyrule and reclaim the power he lost, going so far as to resurrect Ganon as a pawn in his scheme, only for the alliance between the two villains to fracture as each seeks ultimate power for himself.',
     tags: ['vaati', 'four-sword', 'ganon']
   },
@@ -536,7 +541,7 @@ export const games = [
     { platform: 'Nintendo Switch', year: 2019, note: 'Made available through the Nintendo Switch Online service\'s SNES library.' }
   ],
   category: 'Masterpiece',
-  heroImage: '',
+  heroImage: '/images/aLinkToThePast.png',
   tagline: '"It is said that when evil rules all, an entrance to another world will open."', // VERIFICAR - paraphrased summary of the game's opening narration, not an exact verified quote
   synopsis: [
     'In the kingdom of Hyrule, the young hero Link is awakened one stormy night by a telepathic plea from Princess Zelda, who is imprisoned within the dungeons of Hyrule Castle by the dark wizard Agahnim. Rescuing her with the aid of his Uncle\'s sword and shield, Link learns that Agahnim, having seized control of the royal court, has been sacrificing the descendants of the Seven Sages to break the ancient seal on the Sacred Realm, formed generations earlier to imprison the Triforce and the evil that seeks it. Link sets out to gather the three magical Pendants of Virtue hidden across Hyrule in order to claim the legendary Master Sword and stop Agahnim before he can complete his ritual.',
@@ -553,23 +558,24 @@ export const games = [
       name: 'Link',
       role: 'Hero of Hyrule',
       desc: 'A young swordsman summoned by Princess Zelda\'s telepathic call, Link ventures into both Hyrule and its shadowy counterpart, the Dark World, to stop Agahnim and Ganon from claiming the Triforce.',
-      src: ''
+      src: '/images/link.png'
     },
     {
       name: 'Princess Zelda',
       role: 'Princess of Hyrule',
       desc: 'A descendant of the Seven Sages held captive by Agahnim at the story\'s start, later dragged into the Dark World, whose rescue and safety drive much of Link\'s quest.',
-      src: ''
+      src: '/images/zelda.png'
     }
   ],
   timeline: { era: 'fallen-hero-timeline', eraLabel: 'Fallen Hero Timeline' }, // VERIFICAR - per Hyrule Historia, A Link to the Past is placed on the "Hero is defeated" timeline branch (sometimes called the Fallen Hero/Downfall Timeline), alongside Links Awakening and the original Zelda games
   relatedGames: [
-    { relation: 'Direct Sequel', slug: 'links-awakening', title: 'The Legend of Zelda: Link\'s Awakening', src: '' },
-    { relation: 'Sequel (Downfall Timeline)', slug: 'a-link-between-worlds', title: 'The Legend of Zelda: A Link Between Worlds', src: '' },
-    { relation: 'Same Era', slug: 'four-swords-adventures', title: 'The Legend of Zelda: Four Swords Adventures', src: '' }
+    { relation: 'Direct Sequel', slug: 'links-awakening', title: 'The Legend of Zelda: Link\'s Awakening', src: '/images/aLinksAwakening.png' },
+    { relation: 'Sequel (Downfall Timeline)', slug: 'a-link-between-worlds', title: 'The Legend of Zelda: A Link Between Worlds', src: '/images/aLinkBetweenWorlds.png' },
+    { relation: 'Same Era', slug: 'four-swords-adventures', title: 'The Legend of Zelda: Four Swords Adventures', src: '/images/fourSwordsAdventures.png' }
   ],
   villain: {
     name: 'Ganon',
+    src: '/images/ganonBeastForm.png',
     desc: 'Once a thief who obtained the Triforce and was sealed within the Sacred Realm generations before the events of the game, Ganon manipulates the dark wizard Agahnim from his prison, using him as a proxy to break the ancient seal and sacrifice the descendants of the Seven Sages. His ultimate goal is to escape confinement, reclaim total control of the Triforce, and merge the corrupted Dark World with Hyrule itself.',
     tags: ['ganon', 'triforce', 'dark-world']
   },
@@ -611,7 +617,7 @@ export const games = [
     { platform: 'Nintendo Switch', year: 2019, note: 'Full remake with a reimagined "toy-like" diorama art style, an original dungeon-building mode called Chamber Dungeon, and updated mechanics.' }
   ],
   category: 'Masterpiece',
-  heroImage: '',
+  heroImage: '/images/aLinksAwakening.png',
   tagline: '"Even the hero of Hyrule needs a vacation now and then."', // VERIFICAR - paraphrased characterization, not a confirmed exact official quote
   synopsis: [
     'After the events of A Link to the Past, Link sets sail to train and clear his mind, but a violent storm wrecks his ship, leaving him stranded and unconscious on the shores of the mysterious Koholint Island. He awakens in the home of a young woman named Marin, who tells him that the only way to leave the island is to awaken the legendary Wind Fish, said to slumber within a giant egg atop Mt. Tamaranch, by collecting eight magical Instruments of the Sirens scattered across Koholint\'s dungeons.',
@@ -628,19 +634,19 @@ export const games = [
       name: 'Link',
       role: 'Shipwrecked Hero',
       desc: 'Stranded on the unfamiliar Koholint Island after a shipwreck, Link seeks to awaken the Wind Fish and find a way home, only to uncover unsettling truths about the island\'s nature.',
-      src: ''
+      src: '/images/link.png'
     },
     {
       name: 'Marin',
       role: 'Island Resident',
       desc: 'A kind young woman who finds and nurses Link back to health after the shipwreck, dreaming of leaving Koholint Island to see the wider world, and who becomes central to the story\'s emotional core.',
-      src: ''
+      src: '/images/marin.png'
     }
   ],
   timeline: { era: 'fallen-hero-timeline', eraLabel: 'Fallen Hero Timeline' },
   relatedGames: [
-    { relation: 'Direct Sequel', slug: 'a-link-to-the-past', title: 'The Legend of Zelda: A Link to the Past', src: '' },
-    { relation: 'Remake', slug: 'links-awakening-switch', title: 'The Legend of Zelda: Link\'s Awakening (Switch)', src: '' }
+    { relation: 'Direct Sequel', slug: 'a-link-to-the-past', title: 'The Legend of Zelda: A Link to the Past', src: '/images/aLinkToThePast.png' },
+    { relation: 'Remake', slug: 'links-awakening-switch', title: 'The Legend of Zelda: Link\'s Awakening (Switch)', src: '/images/aLinksAwakening.png' }
   ],
   villain: {
     name: 'N/A', // VERIFICAR - the game deliberately subverts the classic villain formula
@@ -683,7 +689,7 @@ export const games = [
     { platform: 'Nintendo 3DS', year: 2013, note: 'Made available digitally through the Virtual Console.' }
   ],
   category: 'Classic',
-  heroImage: '',
+  heroImage: '/images/oracleOfSeasons.png',
   tagline: '"Nature\'s balance rests in the hands of a single hero."', // VERIFICAR - paraphrased summary, not a confirmed exact official quote
   synopsis: [
     'Pulled through a portal by the mysterious old woman Impa into the land of Holodrum, Link is summoned to help find the Oracle of Seasons, Din, who has vanished. He soon discovers that Din has been captured and imprisoned by the General of Darkness, Onox, who forces her to become the "Rod of Seasons," using her power to plunge Holodrum into chaotic, uncontrollable seasonal shifts and corrupt its once-peaceful land, all while secretly seeking to revive the imprisoned Ganon.',
@@ -700,22 +706,23 @@ export const games = [
       name: 'Link',
       role: 'Summoned Hero',
       desc: 'Pulled into Holodrum by Impa to rescue the Oracle of Seasons, Din, Link must restore the land\'s natural balance and stop General Onox from reviving Ganon.',
-      src: ''
+      src: '/images/link.png'
     },
     {
       name: 'Din, Oracle of Seasons',
       role: 'Oracle of Seasons',
       desc: 'The guardian spirit responsible for maintaining Holodrum\'s seasonal balance, captured by Onox and forcibly transformed into a tool of destruction, the Rod of Seasons.',
-      src: ''
+      src: '/images/dinOracle.png'
     }
   ],
   timeline: { era: 'child-era-timeline', eraLabel: 'Child Era Timeline' }, // VERIFICAR - Oracle games' exact timeline placement is debated; Hyrule Historia places them post-Link's Awakening but this simplified categorization may not perfectly reflect official chart nuance
   relatedGames: [
-    { relation: 'Companion Game', slug: 'oracle-of-ages', title: 'The Legend of Zelda: Oracle of Ages', src: '' },
-    { relation: 'Direct Sequel (via password link)', slug: 'the-minish-cap', title: 'The Legend of Zelda: The Minish Cap', src: '' } // VERIFICAR - relationship between Oracle games and Minish Cap connection is a commonly cited but loosely-canon link via passwords
+    { relation: 'Companion Game', slug: 'oracle-of-ages', title: 'The Legend of Zelda: Oracle of Ages', src: '/images/oracleOfAges.png' },
+    { relation: 'Direct Sequel (via password link)', slug: 'the-minish-cap', title: 'The Legend of Zelda: The Minish Cap', src: '/images/theMinishCap.jpg' } // VERIFICAR - relationship between Oracle games and Minish Cap connection is a commonly cited but loosely-canon link via passwords
   ],
   villain: {
     name: 'Onox',
+    src: '/images/onox.png',
     desc: 'Known as the General of Darkness, Onox is a powerful, armor-clad warlord who invades Holodrum seeking to sow chaos and revive the imprisoned Ganon. He captures the Oracle of Seasons, Din, and corrupts her power to throw Holodrum\'s seasons into disarray, ruling from his ever-shifting castle while his monstrous forces spread across the land.',
     tags: ['onox', 'oracle-of-seasons', 'ganon']
   },
@@ -753,7 +760,7 @@ export const games = [
     { platform: 'Nintendo 3DS', year: 2013, note: 'Made available digitally through the Virtual Console.' }
   ],
   category: 'Classic',
-  heroImage: '',
+  heroImage: '/images/oracleOfAges.png',
   tagline: '"Time itself bends to those who seek to control it."', // VERIFICAR - paraphrased summary, not a confirmed exact official quote
   synopsis: [
     'Summoned once again by the mysterious Impa, Link is transported to the land of Labrynna to help the Oracle of Ages, Nayru, who has vanished under suspicious circumstances. He soon discovers that the sorceress Veran, the Sorceress of Shadows, has possessed Nayru\'s body and, using her power over the Harp of Ages, has begun manipulating Labrynna\'s past to twist its present into a dark, oppressive dictatorship ruled through history itself.',
@@ -770,22 +777,23 @@ export const games = [
       name: 'Link',
       role: 'Summoned Hero',
       desc: 'Called once more to a foreign land by Impa, Link must free the possessed Oracle of Ages, Nayru, from the grip of Veran and restore Labrynna\'s corrupted timeline.',
-      src: ''
+      src: '/images/link.png'
     },
     {
       name: 'Nayru, Oracle of Ages',
       role: 'Oracle of Ages',
       desc: 'The guardian spirit responsible for Labrynna\'s flow of time, possessed by the Sorceress of Shadows, Veran, and used against her will to twist the land\'s history.',
-      src: ''
+      src: '/images/naryuOracle.png'
     }
   ],
   timeline: { era: 'child-era-timeline', eraLabel: 'Child Era Timeline' }, // VERIFICAR - Oracle games' exact timeline placement is debated; simplified categorization may not perfectly reflect official chart nuance
   relatedGames: [
-    { relation: 'Companion Game', slug: 'oracle-of-seasons', title: 'The Legend of Zelda: Oracle of Seasons', src: '' },
-    { relation: 'Direct Sequel (via password link)', slug: 'the-minish-cap', title: 'The Legend of Zelda: The Minish Cap', src: '' } // VERIFICAR - relationship between Oracle games and Minish Cap connection is a commonly cited but loosely-canon link via passwords
+    { relation: 'Companion Game', slug: 'oracle-of-seasons', title: 'The Legend of Zelda: Oracle of Seasons', src: '/images/oracleOfSeasons.png' },
+    { relation: 'Direct Sequel (via password link)', slug: 'the-minish-cap', title: 'The Legend of Zelda: The Minish Cap', src: '/images/theMinishCap.jpg' } // VERIFICAR - relationship between Oracle games and Minish Cap connection is a commonly cited but loosely-canon link via passwords
   ],
   villain: {
     name: 'Veran',
+    src: '/images/veran.png',
     desc: 'Known as the Sorceress of Shadows, Veran is a body-possessing witch who seizes control of the Oracle of Ages, Nayru, in order to exploit her power over the Harp of Ages. By manipulating key moments in Labrynna\'s past, she reshapes its present into a totalitarian nightmare, all in service of a larger, hidden plot to bring about Ganon\'s return.',
     tags: ['veran', 'oracle-of-ages', 'ganon']
   },
@@ -821,7 +829,7 @@ export const games = [
   platform: 'Nintendo 3DS',
   platformHistory: [],
   category: 'Masterpiece',
-  heroImage: '',
+  heroImage: '/images/aLinkBetweenWorlds.png',
   tagline: '"A rift between worlds threatens to unravel them both."', // VERIFICAR - paraphrased summary, not a confirmed exact official quote
   synopsis: [
     'Generations after the events of A Link to the Past, a peaceful blacksmith\'s apprentice named Link living in Hyrule discovers a mysterious sorcerer named Yuga who has begun turning the Seven Sages into paintings using a strange power. Learning that Yuga seeks to resurrect the ancient demon Ganon and revive the long-lost kingdom of Lorule by using the sages\' captured power, Link is aided by a strange, talking rabbit-like merchant named Ravio, who lends him magical items to rent rather than find in dungeons.',
@@ -838,22 +846,23 @@ export const games = [
       name: 'Link',
       role: 'Blacksmith\'s Apprentice',
       desc: 'A humble apprentice living in Hyrule generations after A Link to the Past, who gains the unique ability to merge into walls and travel between Hyrule and the mirrored world of Lorule to stop Yuga\'s scheme.',
-      src: ''
+      src: '/images/link.png'
     },
     {
       name: 'Princess Hilda',
       role: 'Princess of Lorule',
       desc: 'The desperate ruler of the decaying kingdom of Lorule, who secretly collaborates with the sorcerer Yuga in a bid to steal Hyrule\'s Triforce and save her collapsing world.',
-      src: ''
+      src: '/images/princessHilda.png'
     }
   ],
   timeline: { era: 'fallen-hero-timeline', eraLabel: 'Fallen Hero Timeline' },
   relatedGames: [
-    { relation: 'Direct Sequel', slug: 'a-link-to-the-past', title: 'The Legend of Zelda: A Link to the Past', src: '' },
-    { relation: 'Spin-off', slug: 'tri-force-heroes', title: 'The Legend of Zelda: Tri Force Heroes', src: '' }
+    { relation: 'Direct Sequel', slug: 'a-link-to-the-past', title: 'The Legend of Zelda: A Link to the Past', src: '/images/aLinkToThePast.png' },
+    { relation: 'Spin-off', slug: 'tri-force-heroes', title: 'The Legend of Zelda: Tri Force Heroes', src: '/images/TriForceHeroes.png' }
   ],
   villain: {
     name: 'Yuga',
+    src: '/images/yuga.png',
     desc: 'A vain, theatrical sorcerer obsessed with beauty, Yuga seeks to capture the power of the Seven Sages by transforming them into paintings, ultimately intending to fuse with the resurrected demon Ganon to become a god-like being. His alliance with Lorule\'s Princess Hilda, who hopes to use his power to save her dying kingdom, drives much of the story\'s central conflict.',
     tags: ['yuga', 'lorule', 'ganon']
   },
@@ -890,7 +899,7 @@ export const games = [
   platform: 'Nintendo 3DS',
   platformHistory: [],
   category: 'Spin-off',
-  heroImage: '',
+  heroImage: '/images/TriForceHeroes.png',
   tagline: '"Fashion is the true power of the Triforce... or so it seems."', // VERIFICAR - paraphrased characterization of the game's tone, not a confirmed exact official quote
   synopsis: [
     'In the kingdom of Hytopia, a land whose people prize fashion and style above all else, disaster strikes when the witch Lady Maud curses Princess Styla with an unremovable, hideous outfit after a fit of jealousy. Desperate to free their princess, the royal wizard Madame Couture summons three heroes, each named Link, from a mysterious drifting fog to journey to the Drablands, a series of trial-filled towers, in search of the enchanted material needed to craft a cure.',
@@ -907,21 +916,22 @@ export const games = [
       name: 'Three Links',
       role: 'Summoned Heroes',
       desc: 'Three separate incarnations of Link, summoned from a mysterious fog by Madame Couture, who must cooperate closely — including physically stacking atop one another — to complete the trials of the Drablands and save Princess Styla.',
-      src: ''
+      src: '/images/link.png'
     },
     {
       name: 'Princess Styla',
       role: 'Princess of Hytopia',
       desc: 'The ruler of Hytopia, cursed with a hideous, unremovable outfit by the jealous witch Lady Maud, whose plight sets the game\'s cooperative quest in motion.',
-      src: ''
+      src: '/images/princess.Styla.png'
     }
   ],
   timeline: { era: 'fallen-hero-timeline', eraLabel: 'Fallen Hero Timeline' }, // VERIFICAR - Tri Force Heroes' timeline placement is only loosely implied and not firmly confirmed in official materials; grouped here near A Link Between Worlds as a simplification
   relatedGames: [
-    { relation: 'Loosely Connected', slug: 'a-link-between-worlds', title: 'The Legend of Zelda: A Link Between Worlds', src: '' } // VERIFICAR - connection to A Link Between Worlds is stylistic/thematic rather than a confirmed direct narrative link
+    { relation: 'Loosely Connected', slug: 'a-link-between-worlds', title: 'The Legend of Zelda: A Link Between Worlds', src: '/images/aLinkBetweenWorlds.png' } // VERIFICAR - connection to A Link Between Worlds is stylistic/thematic rather than a confirmed direct narrative link
   ],
   villain: {
     name: 'Lady Maud',
+    src: '/images/ladyMaud.png',
     desc: 'A jealous witch whose envy of Princess Styla\'s beauty and status leads her to curse the princess with a hideous, unremovable outfit. Unlike the series\' typical world-conquering villains, Lady Maud\'s motivations are rooted in personal jealousy and vanity rather than a quest for power over the Triforce, fitting the game\'s lighter, fashion-obsessed tone.',
     tags: ['lady-maud', 'hytopia', 'drablands']
   },
@@ -956,7 +966,7 @@ export const games = [
   platform: 'Nintendo Switch',
   platformHistory: [],
   category: 'Masterpiece', // VERIFICAR - critical reception was very strong, but "Masterpiece" categorization is a subjective editorial judgment call given the game's relative recency
-  heroImage: '',
+  heroImage: '/images/echoesOfKingdom.png',
   tagline: '"This time, it\'s up to Zelda to save the day."', // VERIFICAR - paraphrased marketing framing, not a confirmed exact in-game quote
   synopsis: [
     'Strange, swirling rifts begin appearing across Hyrule, swallowing people, places, and even Link himself into a mysterious void. When Princess Zelda investigates the disappearances alongside Link, she too is drawn into a rift, but is rescued by a fairy named Tri, who bestows upon her the mystical Tri Rod, a powerful artifact capable of creating "echoes," temporary copies of objects and creatures Zelda has previously encountered.',
@@ -973,21 +983,22 @@ export const games = [
       name: 'Princess Zelda',
       role: 'The Hero of Hyrule',
       desc: 'Taking on the role of playable hero for the first time in a mainline entry, Zelda wields the Tri Rod to create echoes of objects and creatures as she searches for a way to close the rifts consuming Hyrule and rescue the missing Link.',
-      src: ''
+      src: '/images/zelda.png'
     },
     {
       name: 'Tri',
       role: 'Fairy Companion',
       desc: 'A small, mysterious fairy-like being who saves Zelda from a rift and grants her the Tri Rod, guiding her throughout the quest to understand and stop the spreading rifts.',
-      src: ''
+      src: '/images/Tri.png'
     }
   ],
   timeline: { era: 'era-of-the-wilds', eraLabel: 'Era of the Wilds' }, // VERIFICAR - official timeline placement for this title has not been confirmed by Nintendo at time of writing; grouped here as a reasonable but unconfirmed placement given its modern, standalone presentation
   relatedGames: [
-    { relation: 'Spiritual Successor (Gameplay)', slug: 'tears-of-the-kingdom', title: 'The Legend of Zelda: Tears of the Kingdom', src: '' } // VERIFICAR - connection is stylistic/mechanical (top-down echo/creation systems draw comparison to Ultrahand) rather than a confirmed narrative link
+    { relation: 'Spiritual Successor (Gameplay)', slug: 'tears-of-the-kingdom', title: 'The Legend of Zelda: Tears of the Kingdom', src: '/images/tearsOfTheKingdom.png' } // VERIFICAR - connection is stylistic/mechanical (top-down echo/creation systems draw comparison to Ultrahand) rather than a confirmed narrative link
   ],
   villain: {
     name: 'Null',
+    src: '/images/null.png',
     desc: 'A shadowy, enigmatic entity tied to the origin of the rifts consuming Hyrule, Null represents a force of erasure and inversion, manifesting as a dark reflection connected to the game\'s "Stillness" and rift mechanics. Its motivations are less about conquest in the traditional sense and more about unraveling and inverting Hyrule\'s existence, making it a distinct kind of antagonist compared to the series\' more overtly power-hungry villains.',
     tags: ['null', 'rifts', 'echoes']
   },
@@ -1029,7 +1040,7 @@ export const games = [
     { platform: 'Nintendo Switch', year: 2018, note: 'Made available through the Nintendo Switch Online service\'s NES library.' }
   ],
   category: 'Classic',
-  heroImage: '',
+  heroImage: '/images/theLegendOfZeldaNes.png',
   tagline: '"It\'s dangerous to go alone! Take this."', // one of the most widely recognized lines associated with the game, spoken by the old man near the game's start
   synopsis: [
     'In the kingdom of Hyrule, the evil Prince of Darkness, Ganon, invades and steals the Triforce of Power, plunging the land into chaos. Before Ganon can capture her as well, Princess Zelda shatters the Triforce of Wisdom into eight fragments and hides them across Hyrule, instructing her nursemaid Impa to find a hero capable of recovering them before sending Impa out into the wilderness, where she is soon surrounded by Ganon\'s monsters.',
@@ -1046,22 +1057,23 @@ export const games = [
       name: 'Link',
       role: 'The Hero of Hyrule',
       desc: 'A young, unnamed boy in the original narrative (traditionally called Link) who sets out to recover the scattered fragments of the Triforce of Wisdom and rescue Princess Zelda from Ganon.',
-      src: ''
+      src: '/images/link.png'
     },
     {
       name: 'Princess Zelda',
       role: 'Princess of Hyrule',
       desc: 'The princess who shatters and hides the Triforce of Wisdom to keep it from Ganon before being captured, and whose rescue forms the ultimate goal of Link\'s quest.',
-      src: ''
+      src: '/images/zelda.png'
     }
   ],
   timeline: { era: 'fallen-hero-timeline', eraLabel: 'Fallen Hero Timeline' },
   relatedGames: [
-    { relation: 'Direct Sequel', slug: 'zelda-ii-the-adventure-of-link', title: 'Zelda II: The Adventure of Link', src: '' },
-    { relation: 'Same Era', slug: 'a-link-to-the-past', title: 'The Legend of Zelda: A Link to the Past', src: '' }
+    { relation: 'Direct Sequel', slug: 'zelda-ii-the-adventure-of-link', title: 'Zelda II: The Adventure of Link', src: '/images/zelda2TheAdventureOfLink.png' },
+    { relation: 'Same Era', slug: 'a-link-to-the-past', title: 'The Legend of Zelda: A Link to the Past', src: '/images/aLinkToThePast.png' }
   ],
   villain: {
     name: 'Ganon',
+    src: '/images/ganonBeastForm.png',
     desc: 'The Prince of Darkness who invades Hyrule and steals the Triforce of Power at the story\'s outset, seeking to also capture the Triforce of Wisdom and Princess Zelda to gain total control over Hyrule. As the original antagonist of the series, Ganon establishes the archetype of the demonic, power-hungry villain that would recur, evolve, and be reinterpreted throughout nearly every subsequent Zelda title.',
     tags: ['ganon', 'triforce', 'hyrule']
   },
@@ -1103,7 +1115,7 @@ export const games = [
     { platform: 'Nintendo Switch', year: 2021, note: 'Made available through the Nintendo Switch Online service\'s NES library.' }
   ],
   category: 'Classic',
-  heroImage: '',
+  heroImage: '/images/zelda2TheAdventureOfLink.png',
   tagline: '"The seal that has kept the Triforce of Courage hidden is about to be broken."', // VERIFICAR - paraphrased summary, not a confirmed exact official quote
   synopsis: [
     'Some years after recovering the Triforce of Wisdom and defeating Ganon, Link discovers a strange mark on the back of his hand that begins to glow, drawing him to Impa, who reveals a hidden passage beneath Hyrule Castle. There, Link learns of Princess Zelda, an ancestor of the current princess, who was placed into an eternal sleep by a jealous prince seeking to steal the secret of the Triforce of Courage, the final piece needed to reunite the full power of the Triforce and awaken her from her enchanted slumber.',
@@ -1120,22 +1132,23 @@ export const games = [
       name: 'Link',
       role: 'The Hero of Hyrule',
       desc: 'Years after his first adventure, Link discovers his destiny to find the Triforce of Courage and awaken an ancestral Princess Zelda from her enchanted sleep, while thwarting Ganon\'s followers from resurrecting their master.',
-      src: ''
+      src: '/images/link.png'
     },
     {
       name: 'Princess Zelda (the Sleeping Princess)',
       role: 'Ancestral Princess of Hyrule',
       desc: 'An ancestor of the modern Hyrulean royal line, placed into an eternal magical sleep by a vengeful prince after refusing to reveal the secret of the Triforce, whose awakening is the ultimate goal of Link\'s quest.',
-      src: ''
+      src: '/images/zelda.png'
     }
   ],
   timeline: { era: 'fallen-hero-timeline', eraLabel: 'Fallen Hero Timeline' },
   relatedGames: [
-    { relation: 'Direct Sequel', slug: 'the-legend-of-zelda', title: 'The Legend of Zelda', src: '' },
-    { relation: 'Same Era', slug: 'a-link-to-the-past', title: 'The Legend of Zelda: A Link to the Past', src: '' }
+    { relation: 'Direct Sequel', slug: 'the-legend-of-zelda', title: 'The Legend of Zelda', src: '/images/theLegendOfZeldaNes.png' },
+    { relation: 'Same Era', slug: 'a-link-to-the-past', title: 'The Legend of Zelda: A Link to the Past', src: '/images/aLinkToThePast.png' }
   ],
   villain: {
     name: 'Ganon (Spirit/Remnant)',
+    src: '/images/ganonBeastForm.png',
     desc: 'Though slain in the original Legend of Zelda, Ganon\'s followers work throughout the game to resurrect him using Link\'s own spilled blood, making his lingering, unseen threat the driving force behind the game\'s antagonistic forces even without a direct physical confrontation with Ganon himself until the very end.',
     tags: ['ganon', 'triforce-of-courage', 'hyrule']
   },
@@ -1175,7 +1188,7 @@ export const games = [
     { platform: 'Wii U', year: 2013, note: 'Remastered as "The Wind Waker HD" with upgraded visuals, faster sailing, and revised inventory management.' }
   ],
   category: 'Masterpiece',
-  heroImage: '',
+  heroImage: '/images/theWindWaker.png',
   tagline: '"On days when the wind blows hard, an old man sometimes tells a tale."',
   synopsis: [
     'On a small island in a vast, sprawling sea known as the Great Sea, a young boy named Link lives among the scattered islands that are all that remain of a long-flooded Hyrule, following an ancient tradition passed down through legend. When a giant bird drops a girl named Tetra, the tough young captain of a pirate crew, near his home, and later a monstrous bird abducts his younger sister Aryll mistaking her for Tetra, Link sets out across the Great Sea determined to rescue her from the clutches of the Ganon-controlled monster.',
@@ -1192,23 +1205,24 @@ export const games = [
       name: 'Link',
       role: 'Islander Hero',
       desc: 'A young boy from a small island in the Great Sea who sets sail to rescue his kidnapped sister Aryll, uncovering the submerged truth of Hyrule and his own destiny as its chosen hero along the way.',
-      src: ''
+      src: '/images/link.png'
     },
     {
       name: 'Tetra',
       role: 'Pirate Captain / Princess Zelda',
       desc: 'The sharp-tongued, fearless captain of a pirate crew who accompanies Link on his journey, later revealed to be the last living descendant of the royal Hyrulean bloodline and the reincarnation of Princess Zelda.',
-      src: ''
+      src: '/images/tetra.png'
     }
   ],
   timeline: { era: 'adult-era-timeline', eraLabel: 'Adult Era Timeline' },
   relatedGames: [
-    { relation: 'Direct Sequel', slug: 'phantom-hourglass', title: 'The Legend of Zelda: Phantom Hourglass', src: '' },
-    { relation: 'Prequel', slug: 'ocarina-of-time', title: 'The Legend of Zelda: Ocarina of Time', src: '' },
-    { relation: 'Remaster', slug: 'the-wind-waker-hd', title: 'The Legend of Zelda: The Wind Waker HD', src: '' }
+    { relation: 'Direct Sequel', slug: 'phantom-hourglass', title: 'The Legend of Zelda: Phantom Hourglass', src: '/images/phantomHourglass.png' },
+    { relation: 'Prequel', slug: 'ocarina-of-time', title: 'The Legend of Zelda: Ocarina of Time', src: '/images/ocarinaOfTime.png' },
+    { relation: 'Remaster', slug: 'the-wind-waker-hd', title: 'The Legend of Zelda: The Wind Waker HD', src: '/images/theWindWaker.png' }
   ],
   villain: {
     name: 'Ganon',
+    src: '/images/ganonBeastForm.png',
     desc: 'Resurfacing generations after his defeat at the hands of the Hero of Time failed to fully secure Hyrule\'s fate, Ganon reemerges from the flooded kingdom seeking the fabled Triforce, which he believes remains intact and capable of granting him the power to reshape the world. His pursuit of Tetra, unknowingly the last heir of the Hyrulean bloodline, and his descent back into the submerged ruins of Hyrule drive the story\'s central conflict toward its climax.',
     tags: ['ganon', 'great-sea', 'triforce']
   },
@@ -1246,7 +1260,7 @@ export const games = [
   platform: 'Nintendo DS',
   platformHistory: [],
   category: 'Classic',
-  heroImage: '',
+  heroImage: '/images/phantomHourglass.png',
   tagline: '"A ghost ship sails these waters, and those who board it are never seen again."', // VERIFICAR - paraphrased framing of the game's opening hook, not a confirmed exact official quote
   synopsis: [
     'Some time after the events of The Wind Waker, Link and Tetra\'s pirate crew encounter a ghostly derelict ship drifting through a foggy stretch of the Great Sea. When Tetra boards the mysterious vessel to investigate and vanishes without a trace, Link dives into the water after her, only to wash ashore on the unfamiliar Mercay Island, where he is aided by a tiny fairy named Ciela, who has lost her memory, and the eccentric old man Oshus.',
@@ -1263,22 +1277,23 @@ export const games = [
       name: 'Link',
       role: 'Islander Hero (Sequel to Wind Waker)',
       desc: 'Continuing his adventures on the Great Sea after The Wind Waker, Link dives after the vanished Tetra and finds himself on a new quest across uncharted waters to rescue her from the Ghost Ship and the ancient evil Bellum.',
-      src: ''
+      src: '/images/link.png'
     },
     {
       name: 'Ciela',
       role: 'Fairy Companion',
       desc: 'A small, memory-lost fairy who aids Link throughout his journey, later revealed to have a deeper connection to the Ocean King and the story\'s central mystery.',
-      src: ''
+      src: '/images/tatl&tael.png'
     }
   ],
   timeline: { era: 'adult-era-timeline', eraLabel: 'Adult Era Timeline' },
   relatedGames: [
-    { relation: 'Direct Prequel', slug: 'the-wind-waker', title: 'The Legend of Zelda: The Wind Waker', src: '' },
-    { relation: 'Direct Sequel', slug: 'spirit-tracks', title: 'The Legend of Zelda: Spirit Tracks', src: '' }
+    { relation: 'Direct Prequel', slug: 'the-wind-waker', title: 'The Legend of Zelda: The Wind Waker', src: '/images/theWindWaker.png' },
+    { relation: 'Direct Sequel', slug: 'spirit-tracks', title: 'The Legend of Zelda: Spirit Tracks', src: '/images/spiritTracks.png' }
   ],
   villain: {
     name: 'Bellum',
+    src: '/images/bellum.png',
     desc: 'An ancient, parasitic sea demon sealed away beneath the Temple of the Ocean King generations earlier, Bellum has slowly been draining the Ocean King\'s power from within, weakening his ability to protect the seas. Its abduction of Tetra and manipulation of the Ghost Ship and Phantoms serve its larger goal of fully escaping its seal and unleashing chaos upon the ocean.',
     tags: ['bellum', 'ocean-king', 'phantom-hourglass']
   },
@@ -1314,7 +1329,7 @@ export const games = [
   platform: 'Nintendo DS',
   platformHistory: [],
   category: 'Classic',
-  heroImage: '',
+  heroImage: '/images/spiritTracks.png',
   tagline: '"A ghostly princess, a spectral train, and a kingdom bound by ancient tracks."', // VERIFICAR - paraphrased framing, not a confirmed exact official quote
   synopsis: [
     'A century after the events of Phantom Hourglass, in a New Hyrule built by descendants of the original Hyrulean people, a young engineer-in-training named Link dreams of one day driving a train across the kingdom\'s network of Spirit Tracks. When summoned to Hyrule Castle to receive his engineer\'s certificate, Link and Princess Zelda uncover that the tracks binding the ancient Demon King Malladus are mysteriously vanishing, and that Zelda\'s advisor, Chancellor Cole, is secretly working to revive Malladus using Zelda\'s own body as a vessel.',
@@ -1331,21 +1346,22 @@ export const games = [
       name: 'Link',
       role: 'Engineer-in-Training',
       desc: 'A young aspiring train engineer in New Hyrule who becomes entangled in a plot to revive the Demon King Malladus, teaming up with the spectral form of Princess Zelda to restore the Spirit Tracks and save the kingdom.',
-      src: ''
+      src: '/images/link.png'
     },
     {
       name: 'Princess Zelda',
       role: 'Spirit / Phantom Wielder',
       desc: 'Left in a comatose state after Chancellor Cole attempts to use her body as a vessel for Malladus, Zelda\'s spirit accompanies Link throughout the adventure, gaining the unique ability to possess Phantom armor and fight directly by his side.',
-      src: ''
+      src: '/images/zelda.png'
     }
   ],
   timeline: { era: 'adult-era-timeline', eraLabel: 'Adult Era Timeline' },
   relatedGames: [
-    { relation: 'Direct Prequel', slug: 'phantom-hourglass', title: 'The Legend of Zelda: Phantom Hourglass', src: '' }
+    { relation: 'Direct Prequel', slug: 'phantom-hourglass', title: 'The Legend of Zelda: Phantom Hourglass', src: '/images/phantomHourglass.png' }
   ],
   villain: {
     name: 'Malladus',
+    src: '/images/malladus.png',
     desc: 'An ancient Demon King who once waged war against Hyrule generations earlier, Malladus was defeated and sealed away by the Spirits of Light, his power bound within the network of Spirit Tracks. Chancellor Cole, secretly one of Malladus\'s own demonic followers in disguise, works throughout the game to erase the sealing tracks and resurrect the Demon King using Princess Zelda\'s body as a vessel, threatening to plunge New Hyrule back into the darkness of the original war.',
     tags: ['malladus', 'spirit-tracks', 'new-hyrule']
   },
@@ -1385,7 +1401,7 @@ export const games = [
     { platform: 'Wii U', year: 2017, note: 'Released the same day as a simultaneous, final first-party title for the console rather than a later port.' } // VERIFICAR - see platform note above
   ],
   category: 'Masterpiece',
-  heroImage: '',
+  heroImage: '/images/breathOfTheWild.png',
   tagline: '"Open your eyes... Open your eyes, Link."',
   synopsis: [
     'A century after a catastrophic war in which the ancient Guardian and Divine Beast technology of Hyrule was corrupted by the malevolent Calamity Ganon, Link awakens from a mysterious hundred-year slumber within the Shrine of Resurrection, his memories fragmented and lost. Guided by a disembodied voice claiming to be Princess Zelda, he emerges into a ruined, overgrown Hyrule to learn that Ganon\'s dark influence still occupies the ruins of Hyrule Castle, and that Zelda herself has been single-handedly holding the Calamity at bay for a hundred years, awaiting Link\'s return.',
@@ -1402,22 +1418,23 @@ export const games = [
       name: 'Link',
       role: 'The Hero Reawakened',
       desc: 'Awakening from a hundred-year slumber with fragmented memories, Link must relearn his own past while exploring a ruined, open Hyrule, freeing the Divine Beasts, and ultimately confronting Calamity Ganon.',
-      src: ''
+      src: '/images/link.png'
     },
     {
       name: 'Princess Zelda',
       role: 'Princess of Hyrule / Sealing Power',
       desc: 'Having spent a century single-handedly containing Calamity Ganon within Hyrule Castle using her latent sealing power, Zelda guides Link telepathically throughout his journey, her backstory and struggles revealed gradually through memory sequences.',
-      src: ''
+      src: '/images/zelda.png'
     }
   ],
   timeline: { era: 'era-of-the-wilds', eraLabel: 'Era of the Wilds' },
   relatedGames: [
-    { relation: 'Direct Sequel', slug: 'tears-of-the-kingdom', title: 'The Legend of Zelda: Tears of the Kingdom', src: '' },
-    { relation: 'Prequel Spin-off', slug: 'hyrule-warriors-age-of-calamity', title: 'Hyrule Warriors: Age of Calamity', src: '' }
+    { relation: 'Direct Sequel', slug: 'tears-of-the-kingdom', title: 'The Legend of Zelda: Tears of the Kingdom', src: '/images/tearsOfTheKingdom.png' },
+    { relation: 'Prequel Spin-off', slug: 'hyrule-warriors-age-of-calamity', title: 'Hyrule Warriors: Age of Calamity', src: '/images/zelda.png' }
   ],
   villain: {
     name: 'Calamity Ganon',
+    src: '/images/calamityGanon.png',
     desc: 'A formless, ancient malice representing Ganon\'s corrupted essence, sealed for millennia but capable of resurging to plunge Hyrule into catastrophe once more. A century before the game\'s events, Calamity Ganon seized control of Hyrule\'s ancient Guardian and Divine Beast technology, slaughtering the Champions who piloted them and devastating the kingdom, and has since occupied Hyrule Castle, held back only by Princess Zelda\'s sealing power until Link\'s return.',
     tags: ['calamity-ganon', 'divine-beasts', 'hyrule-castle']
   },
@@ -1455,7 +1472,7 @@ export const games = [
   platform: 'Nintendo Switch',
   platformHistory: [],
   category: 'Masterpiece',
-  heroImage: '',
+  heroImage: '/images/tearsOfTheKingdom.png',
   tagline: '"An ancient, malicious presence has awoken beneath Hyrule Castle."', // VERIFICAR - paraphrased framing of the game's opening premise, not a confirmed exact official quote
   synopsis: [
     'Years after the defeat of Calamity Ganon, Link and Princess Zelda investigate a mysterious, spreading corruption discovered deep beneath Hyrule Castle, where they encounter the preserved but decaying corpse of the ancient Demon King Ganondorf. As Ganondorf stirs back to life and unleashes a cataclysmic force that fractures the Master Sword and sends Link plummeting from the sky, Zelda vanishes into the chasm below, and Link awakens with a mysterious new power in his arm known as the Ministrone... more precisely, arm augmented by an ancient Zonai construct, setting him on a quest across a Hyrule now reshaped by floating sky islands and cavernous underground depths.',
@@ -1472,21 +1489,22 @@ export const games = [
       name: 'Link',
       role: 'The Hero of Hyrule',
       desc: 'Gifted with a mysterious new power in his right arm after a cataclysmic encounter beneath Hyrule Castle, Link explores a transformed Hyrule spanning sky, surface, and depths to find the missing Zelda and stop the resurgent Ganondorf.',
-      src: ''
+      src: '/images/link.png'
     },
     {
       name: 'Princess Zelda',
       role: 'Princess of Hyrule',
       desc: 'Vanishing into the chasm beneath Hyrule Castle after Ganondorf\'s awakening, Zelda\'s fate becomes intertwined with an ancient secret tied to the ancient Zonai civilization, uncovered gradually through geoglyphs and memories across the story.',
-      src: ''
+      src: '/images/zelda.png'
     }
   ],
   timeline: { era: 'era-of-the-wilds', eraLabel: 'Era of the Wilds' },
   relatedGames: [
-    { relation: 'Direct Prequel', slug: 'breath-of-the-wild', title: 'The Legend of Zelda: Breath of the Wild', src: '' }
+    { relation: 'Direct Prequel', slug: 'breath-of-the-wild', title: 'The Legend of Zelda: Breath of the Wild', src: '/images/breathOfTheWild.png' }
   ],
   villain: {
     name: 'Ganondorf',
+    src: '/images/ganondorf.png',
     desc: 'The ancient Demon King and progenitor of many later incarnations of Ganon, sealed away generations before the game\'s events after a war against the ancient Zonai civilization and the sages who opposed him. Discovered as a mummified corpse beneath Hyrule Castle, Ganondorf is inadvertently revived, unleashing the corrupting Gloom across Hyrule as he seeks to reclaim the power he lost and enact revenge upon the descendants of those who once defeated him.',
     tags: ['ganondorf', 'zonai', 'gloom']
   },
