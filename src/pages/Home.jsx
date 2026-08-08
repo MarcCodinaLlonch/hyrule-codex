@@ -20,12 +20,12 @@ export default function Home() {
     return (
         <>
             {/* ── Hero Section ── */}
-            <section className="relative h-screen flex items-center justify-center overflow-hidden">
+            <section className="relative h-[calc(100vh-65px)] md:h-[calc(100vh-73px)] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0">
                     <img
                         className="w-full h-full object-cover"
                         data-alt="Epic panoramic view of Hyrule field"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzAmLnm4HhQNV0Hq_Kmd1QT9T9pBGPIR0lLk6RFVFkIMwL2h3CjJPNFrj_NqzI5BAbJ8F4gEA7rRqbz2-KJgkWE0Oz7yjBGFMHT5wOQb8pXhaCF0-EkaBqnNvBHXHnXXA_6tSrB_jD3UkLhX7Zyar5HmGPr6EfaYSmWxrgeTNHMJxFCjQOomJL2cHMQK1iqRGSJNZkVw6lIVEIB3TOoNjR_p_GBVz0pRSw5G23JEBl1jf43L1EcLhA"
+                        src="/images/hero-bg.png"
                     />
                 </div>
                 <div className="absolute inset-0 hero-gradient"></div>
@@ -42,13 +42,13 @@ export default function Home() {
                     <div className="flex flex-col sm:flex-row gap-md justify-center">
                         <Link
                             to="/games"
-                            className="px-xl py-4 bg-primary text-on-primary font-label-md text-label-md rounded-full hover:bg-primary/90 transition-all active:scale-95 shadow-lg"
+                            className="px-xl py-4 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider rounded-full hover:bg-primary/90 hover:scale-105 active:scale-95 hover:shadow-lg shadow-md transition-all duration-300"
                         >
                             Explore the Archive
                         </Link>
                         <Link
                             to="/timeline"
-                            className="px-xl py-4 bg-surface/20 backdrop-blur-sm text-on-surface font-label-md text-label-md rounded-full border border-outline/30 hover:bg-surface/30 transition-all active:scale-95"
+                            className="px-xl py-4 bg-surface/20 backdrop-blur-sm text-on-surface font-label-md text-label-md uppercase tracking-wider rounded-full border border-outline/30 hover:bg-surface/30 hover:scale-105 active:scale-95 hover:shadow-md shadow-sm transition-all duration-300"
                         >
                             View Timeline
                         </Link>

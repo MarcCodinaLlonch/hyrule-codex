@@ -18,10 +18,10 @@ export default function Footer() {
 
                 {/* Social buttons */}
                 <div className="flex gap-md">
-                    <button className="w-10 h-10 rounded-full bg-primary/20 text-primary-fixed flex items-center justify-center hover:bg-primary/40 transition-all">
+                    <button className="w-10 h-10 rounded-full bg-primary/20 text-primary-fixed flex items-center justify-center hover:bg-primary/40 transition-all duration-300 hover:scale-105 active:scale-95">
                         <span className="material-symbols-outlined">share</span>
                     </button>
-                    <button className="w-10 h-10 rounded-full bg-primary/20 text-primary-fixed flex items-center justify-center hover:bg-primary/40 transition-all">
+                    <button className="w-10 h-10 rounded-full bg-primary/20 text-primary-fixed flex items-center justify-center hover:bg-primary/40 transition-all duration-300 hover:scale-105 active:scale-95">
                         <span className="material-symbols-outlined">mail</span>
                     </button>
                 </div>

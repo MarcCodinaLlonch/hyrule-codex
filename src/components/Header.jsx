@@ -46,9 +46,10 @@ export default function Header({ onMenuClick }) {
                 <div className="flex items-center gap-md">
                     <button
                         onClick={onMenuClick}
-                        className="text-primary-fixed hover:bg-primary/10 transition-all duration-300 active:scale-95 p-2 rounded-full"
+                        className="md:hidden text-primary-fixed hover:bg-primary/10 transition-all duration-300 hover:scale-105 active:scale-95 p-2 rounded-full"
                     >
-                        <span className="material-symbols-outlined">menu</span>
+                        
+                        <span className="material-symbols-outlined relative -top-[-5px]">menu</span>
                     </button>
                     <Link
                         to="/"
@@ -81,8 +82,20 @@ export default function Header({ onMenuClick }) {
                 </nav>
 
                 {/* Right: search */}
-                <div className="flex items-center gap-sm">
-                    <button className="text-primary-fixed hover:bg-primary/10 transition-all duration-300 active:scale-95 p-2 rounded-full">
+                <div className="flex items-center">
+                    {/* Camp de cerca per a escriptori (S'amaga en mòbils) */}
+                    <div className="relative group hidden md:block">
+                        <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-secondary/50 group-focus-within:text-primary-fixed transition-colors pointer-events-none text-[20px]">
+                            search
+                        </span>
+                        <input 
+                            type="text" 
+                            placeholder="Search in this site..." 
+                            className="bg-black/10 border border-primary/20 text-on-secondary placeholder:text-on-secondary/40 font-body-sm text-sm rounded-full pl-10 pr-4 py-1.5 focus:outline-none focus:border-primary-fixed focus:ring-1 focus:ring-primary-fixed/50 focus:bg-black/20 transition-all duration-300 w-48 lg:w-64"
+                        />
+                    </div>
+                    {/* Icona de cerca per a mòbils (Es mostra només en mides petites) */}
+                    <button className="md:hidden text-primary-fixed hover:bg-primary/10 transition-all duration-300 hover:scale-105 active:scale-95 p-2 rounded-full">
                         <span className="material-symbols-outlined">search</span>
                     </button>
                 </div>
