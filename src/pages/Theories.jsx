@@ -89,7 +89,7 @@ export default function Theories() {
                 {/* Load More */}
                 <div className="mt-xl text-center">
                     <div className="page-header-divider mb-xl"></div>
-                    <button className="px-10 py-3 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider rounded-full hover:bg-primary/90 hover:scale-105 active:scale-95 hover:shadow-lg shadow-md transition-all duration-300">
+                    <button className="mt-lg px-10 py-3 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider rounded-full hover:bg-primary/90 hover:scale-105 active:scale-95 hover:shadow-lg shadow-md transition-all duration-300">
                         Uncover Older Scrolls
                     </button>
                 </div>
