@@ -69,37 +69,25 @@ export default function Home() {
                     {/* Timeline card (wide) */}
                     <Link
                         to="/timeline"
-                        className="group md:col-span-2 relative overflow-hidden rounded-xl border border-primary/20 bg-on-secondary-container hover:border-primary/50 transition-all duration-500 min-h-[280px] flex flex-col justify-end p-lg"
+                        className="group md:col-span-2 relative overflow-hidden rounded-xl border border-primary/20 bg-surface-container-low parchment-texture hover:border-primary/50 transition-all duration-500 min-h-[280px] flex flex-col justify-end p-lg shadow-sm hover:shadow-md"
                     >
-                        <div className="absolute inset-0">
-                            <img
-                                className="w-full h-full object-cover opacity-30 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700"
-                                data-alt="Hyrule timeline visualization"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7MT-DPF6ooCokTQV1gzkXxWz9-1NlEuArVjGh7lAVn8TucTqNwlmP5IXpGE-oIHD7DyEKnOJ4kYpHs_zsaWOV1CjJCFfa6E2RhpbSwAOFsiSzxL1lfcIIQkGImkvrU6ntU5SZIHhlYyFLl2ZNMkatDRkLNvOxRyeDuwyLp9ZcsjQ28iSmUN3wmi6HijYUw6nV06frgtGRFXEVAu4vNHW5XhL3tYlIL5BiCbX8Xlvf78ewjBbSNSPh_A"
-                            />
-                        </div>
                         <div className="relative z-10">
-                            <p className="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-widest mb-2">The Great Timeline</p>
-                            <h2 className="font-headline-md text-headline-md text-primary-fixed mb-2">Shattered Chronology</h2>
-                            <p className="font-body-md text-body-md text-on-secondary/70 max-w-sm">Trace the three branching timelines born from the Hero's triumph and defeat.</p>
+                            <span className="material-symbols-outlined text-primary mb-3 text-[48px] group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500 opacity-80" style={{ fontVariationSettings: "'FILL' 0, 'wght' 300" }}>account_tree</span>
+                            <p className="font-label-md text-label-md text-primary uppercase tracking-widest mb-2">The Great Timeline</p>
+                            <h2 className="font-headline-md text-headline-md text-on-surface mb-2 group-hover:text-primary transition-colors">Shattered Chronology</h2>
+                            <p className="font-body-md text-body-md text-on-surface-variant max-w-sm">Trace the three branching timelines born from the Hero's triumph and defeat.</p>
                         </div>
                     </Link>
 
                     {/* Games card */}
                     <Link
                         to="/games"
-                        className="group relative overflow-hidden rounded-xl border border-primary/20 bg-surface-container-high parchment-texture hover:border-primary/50 transition-all duration-500 min-h-[280px] flex flex-col justify-end p-lg"
+                        className="group relative overflow-hidden rounded-xl border border-primary/20 bg-surface-container-high parchment-texture hover:border-primary/50 transition-all duration-500 min-h-[280px] flex flex-col justify-end p-lg shadow-sm hover:shadow-md"
                     >
-                        <div className="absolute inset-0">
-                            <img
-                                className="w-full h-full object-cover opacity-20 group-hover:opacity-30 group-hover:scale-105 transition-all duration-700"
-                                data-alt="Legend of Zelda game collection"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy-V8UqC9QEDvRGHnlo2XrHYSGG8uyZAMB_xM0VqSJuIajgdNmh7F3uz8JKoGrWf-Rjv0bYOJqq8q6yA7_K_s1s9yfwCWaibpzIXnmrrwDtIvUO5EEHutlDO1JSYdWmDlHZvxMNJ2dMXLhoAOXnh8z0mVtwSvkJUcOZpS_zNl95myfEJhLe2eIozqFerv6aEV2GP3IL4i6tDWbIcONR4mBUnda9g__AW4bXUOiEJaDODrDu7d-zR_sDA"
-                            />
-                        </div>
                         <div className="relative z-10">
+                            <span className="material-symbols-outlined text-primary mb-3 text-[48px] group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 opacity-80" style={{ fontVariationSettings: "'FILL' 0, 'wght' 300" }}>auto_stories</span>
                             <p className="font-label-md text-label-md text-primary uppercase tracking-widest mb-2">29 Titles</p>
-                            <h2 className="font-headline-md text-headline-md text-on-surface mb-2">The Legend Archive</h2>
+                            <h2 className="font-headline-md text-headline-md text-on-surface mb-2 group-hover:text-primary transition-colors">The Legend Archive</h2>
                             <p className="font-body-md text-body-md text-on-surface-variant">Every game, every era, every hero meticulously chronicled.</p>
                         </div>
                     </Link>
@@ -111,17 +99,18 @@ export default function Home() {
                     {/* Theories card */}
                     <Link
                         to="/theories"
-                        className="group relative overflow-hidden rounded-xl border border-primary/20 bg-surface-container parchment-texture hover:border-primary/50 transition-all duration-500 min-h-[220px] flex flex-col justify-end p-lg"
+                        className="group relative overflow-hidden rounded-xl border border-primary/20 bg-surface-container parchment-texture hover:border-primary/50 transition-all duration-500 min-h-[220px] flex flex-col justify-end p-lg shadow-sm hover:shadow-md"
                     >
                         <div className="relative z-10">
-                            <span className="material-symbols-outlined text-primary mb-2" style={{ fontVariationSettings: "'FILL' 1" }}>lightbulb</span>
-                            <h2 className="font-headline-sm text-headline-sm text-on-surface mb-1">Ancient Theories</h2>
+                            <span className="material-symbols-outlined text-primary mb-2 text-[36px] group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-500 opacity-80" style={{ fontVariationSettings: "'FILL' 0, 'wght' 300" }}>explore</span>
+                            <h2 className="font-headline-sm text-headline-sm text-on-surface mb-1 group-hover:text-primary transition-colors">Ancient Theories</h2>
                             <p className="font-body-md text-body-md text-on-surface-variant text-sm">Scholar-verified hypotheses and fan discoveries.</p>
                         </div>
                     </Link>
 
                     {/* Connections Explorer card (wide) */}
-                    <div className="md:col-span-2 relative overflow-hidden rounded-xl border border-primary/20 bg-surface-container-low parchment-texture min-h-[220px] flex flex-col justify-center p-lg engraved-gold">
+                    <div className="md:col-span-2 relative overflow-hidden rounded-xl border border-primary/20 bg-surface-container-low parchment-texture min-h-[220px] flex flex-col justify-center p-lg shadow-sm opacity-90">
+                        <span className="material-symbols-outlined text-primary mb-2 text-[36px] opacity-80" style={{ fontVariationSettings: "'FILL' 0, 'wght' 300" }}>hub</span>
                         <p className="font-label-md text-label-md text-primary uppercase tracking-widest mb-2">Coming Soon</p>
                         <h2 className="font-headline-md text-headline-md text-on-surface mb-2">Connections Explorer</h2>
                         <p className="font-body-md text-body-md text-on-surface-variant max-w-lg">An interactive web of lore connections — characters, artifacts, and locations across all timelines.</p>

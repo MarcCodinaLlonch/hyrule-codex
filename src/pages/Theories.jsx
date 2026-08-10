@@ -45,9 +45,9 @@ export default function Theories() {
                 {/* Header Section */}
                 <section className="mb-xl text-center">
                     <span className="text-primary-fixed font-label-md text-label-md uppercase tracking-[0.2em] block mb-2">Speculative Archive</span>
-                    <h1 className="text-primary-fixed font-display-lg-mobile md:text-display-lg font-display-lg mb-4 italic">Ancient Theories &amp; Hypotheses</h1>
-                    <div className="custom-divider max-w-xs mx-auto mb-8"></div>
-                    <p className="text-secondary-fixed font-body-lg text-body-lg max-w-2xl mx-auto">
+                    <h1 className="text-primary-fixed-dim font-display-lg-mobile md:text-display-lg font-display-lg mb-0 italic">Ancient Theories &amp; Hypotheses</h1>
+                    <div className="page-header-divider"></div>
+                    <p className="text-inverse-on-surface font-body-lg text-body-lg max-w-2xl mx-auto">
                         Explore the whispers of the past. These documented theories represent the collective findings of Hyrule's most dedicated scholars and fan-cartographers.
                     </p>
                 </section>
@@ -88,6 +88,7 @@ export default function Theories() {
 
                 {/* Load More */}
                 <div className="mt-xl text-center">
+                    <div className="page-header-divider mb-xl"></div>
                     <button className="px-10 py-3 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider rounded-full hover:bg-primary/90 hover:scale-105 active:scale-95 hover:shadow-lg shadow-md transition-all duration-300">
                         Uncover Older Scrolls
                     </button>

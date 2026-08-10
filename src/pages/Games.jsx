@@ -11,8 +11,9 @@ export default function Games() {
                 {/* Header & Search Section */}
                 <section className="mb-xl text-center md:text-left flex flex-col md:flex-row md:items-end justify-between gap-lg">
                     <div>
-                        <h1 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary-fixed-dim mb-xs">The Legend Archive</h1>
-                        <p className="font-body-lg text-body-lg text-secondary-fixed-dim/80 max-w-2xl">
+                        <h1 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary-fixed-dim mb-0">The Legend Archive</h1>
+                        <div className="page-header-divider"></div>
+                        <p className="font-body-lg text-body-lg text-inverse-on-surface max-w-2xl">
                             Traverse the fractured timelines of Hylian history. Every entry, every hero, every legend meticulously chronicled for the curious explorer.
                         </p>
                     </div>
@@ -101,11 +102,7 @@ export default function Games() {
 
                 {/* Pagination / Load More */}
                 <div className="mt-xl flex flex-col items-center gap-md">
-                    <div className="w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent relative mb-md">
-                        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-surface-container rotate-45 border-2 border-primary/20 flex items-center justify-center">
-                            <span className="material-symbols-outlined text-primary scale-75 -rotate-45" style={{ fontVariationSettings: "'FILL' 1" }}>history_edu</span>
-                        </div>
-                    </div>
+                    <div className="page-header-divider w-full max-w-none" style={{ marginLeft: 'auto', marginRight: 'auto' }}></div>
                     <button className="px-xl py-4 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider rounded-full hover:bg-primary/90 hover:scale-105 active:scale-95 hover:shadow-lg shadow-md transition-all duration-300 flex items-center gap-md">
                         UNVEIL MORE RECORDS
                         <span className="material-symbols-outlined">expand_more</span>

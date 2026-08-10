@@ -46,6 +46,12 @@
     border-top: 0;
 }
 
+/* Page header divider: left-aligned on the Games page */
+.games-page .page-header-divider {
+    margin-left: 0;
+    margin-right: auto;
+}
+
 /* Card hover animation with lift + scale */
 .card-hover {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);

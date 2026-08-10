@@ -44,6 +44,32 @@
     opacity: 1; /* overrides parent opacity */
 }
 
+/* ---- Page header divider (Games, Timeline, Theories dark pages) ---- */
+/* Gold gradient lines + triforce marker for dark #1B4D3E backgrounds.  */
+.page-header-divider {
+    position: relative;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #d4af37 50%, transparent);
+    opacity: 0.6;
+    margin: 0.75rem auto;
+    margin-bottom: 2.2rem; 
+    max-width: 20rem;
+} 
+
+.page-header-divider::after {
+    content: '▲';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #1B4D3E; /* matches dark-green page background */ 
+    padding: 0 10px; 
+    color: #d4af37;
+    font-size: 11px;
+    opacity: 1;
+    line-height: 1;
+}
+
 /* ---- Parchment card (theories, timeline) ---- */
 .parchment-card {
     background-color: #F5E6C8;

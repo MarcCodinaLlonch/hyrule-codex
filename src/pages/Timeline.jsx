@@ -80,17 +80,11 @@ export default function Timeline() {
 
                     {/* Page Header */}
                     <div className="text-center mb-xl">
-                        <h1 className="font-display-lg text-display-lg text-primary-fixed-dim mb-xs">Chronicles of the Ages</h1>
-                        <p className="font-body-lg text-body-lg text-primary-fixed/70 max-w-2xl mx-auto">
+                        <h1 className="font-display-lg text-display-lg text-primary-fixed-dim mb-0">Chronicles of the Ages</h1>
+                        <div className="page-header-divider"></div>
+                        <p className="font-body-lg text-body-lg text-inverse-on-surface max-w-2xl mx-auto">
                             Trace the shattered history of Hyrule through the legendary Hero's journey across disparate realities.
                         </p>
-                        <div className="flex justify-center mt-sm">
-                            <div className="w-16 h-px bg-primary-fixed/30"></div>
-                            <div className="mx-4 text-primary-fixed">
-                                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>change_history</span>
-                            </div>
-                            <div className="w-16 h-px bg-primary-fixed/30"></div>
-                        </div>
                     </div>
 
                     {/* Unified Era */}
